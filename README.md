@@ -18,7 +18,7 @@ Notre utilisation personnelle de services de lecture et d'écriture en ligne con
 ### Démocratie technique
 1. Pour les auteurs
 - Communautaire
-- Évite l'édition chère
+- Évite l'édition chère (contourne les maisons d'éditions)
 - Avoir des avis rapidement pour les jeunes auteurs
 - Démocratisation de l'écriture -> ouverte à plus de monde
 2. Pour les lecteurs
@@ -28,8 +28,8 @@ Notre utilisation personnelle de services de lecture et d'écriture en ligne con
 
 ### Substitutions:
 - Substituer le papier par le digital
-- Manuscripts papier vers le digital, beaucoup moins de gaspi de papier par les ratures mais attention substituation à l'empreinte carbone
-- Permet d'éviter d'imprimer des manuscripts vers les maisons d'éditions
+- Manuscripts papier vers le digital, beaucoup moins de gaspillage de papier pour opérer des changements dans les textes mais à voir si c'est rentable d'un point de vue écologique
+- Permet d'éviter d'imprimer des manuscripts vers les maisons d'éditions puis qu'on poste directement en ligne
 
 ### Effet rebond:
 - Avoir une copie papier et une copie numérique
