@@ -1,16 +1,16 @@
 # Réduction de l'impact écologique du service numérique d'un site de lecture en ligne
 
 ## Choix du Sujet
-Notre utilisation personnelle de services de lecture et d'écriture en ligne constitue une valeur moyenne horaire de 20h/semaine. Ce qui est une grosse partie de notre consommation en ligne, non pas pour la consommation électrique mais la durée d'utilisation. Nous avons comme chiffre, un taux de 13% des répondant qui utilise un service de lecture de livre en ligne en 2023 (source: ).
+Notre utilisation personnelle de services de lecture et d'écriture en ligne constitue une valeur moyenne horaire de 20h/semaine. Ce qui est une grosse partie de notre consommation en ligne, non pas pour la consommation électrique mais la durée d'utilisation. Nous avons comme chiffre, un taux de 13% des répondant qui utilise un service de lecture de livre en ligne en 2023 (source plus bas).
 - Une augmentation significative durant la période COVID de lecteurs(ices) en ligne.
-- 15 millions 
+- 15 millions d'oeuvres écrites sur le site Archive of our Own
 
 
 ## Utilité Social
-- Pour la culture -> livre depuis très longtemps alimente la culture / les meurs et la moral
-- Pour la connaissance -> depuis longtemps livres permettent de partager la connaissance et d'apprendre / d'étudier
-- Pour le loisir et le bien-être -> échappatoire / donne des conseils / relativisé  sur notre vie / donne un boost de confiance
-- Pour l'expression de soi et des autres -> permet de mieux s'exprimer, de discuter avec les autres, alimenter les débats, decouverte d'opinion
+- Pour la culture -> les livres alimentent depuis très longtemps la culture, les meurs et la morale
+- Pour la connaissance -> depuis longtemps les livres permettent de partager la connaissance et d'apprendre, d'étudier divers sujets
+- Pour le loisir et le bien-être -> les livres peuvent représenter une échappatoire à la dépression ou à un mal-être quelconque, donner des conseils de vie, permettre de relativiser sur notre existence, ou aider avec la confiance en soi
+- Pour l'expression de soi et des autres -> les livres permettent de s'exprimer, de découvrir différentes opinions, d'en discuter avec les autres, d'alimenter des débats
 - Pour la liberté d'expression -> pour notre chère constitution
 
 ## Effets de la numérisation
