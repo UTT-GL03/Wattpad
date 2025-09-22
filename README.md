@@ -15,18 +15,26 @@ Notre utilisation personnelle de services de lecture et d'écriture en ligne con
 - Pour le climat -> réduit l'utilisation de papier, et utilise peut de consommation éléctrique comparer à d'autres divertissements
 
 ## Effets de la numérisation
+### Démocratie technique
 1. Pour les auteurs
 - Communautaire
-- Évite l'édition
+- Évite l'édition chère
 - Avoir des avis rapidement pour les jeunes auteurs
-- Faciliter d'accès et de liberté d'expression
-- Démocratisation de l'écriture
+- Démocratisation de l'écriture -> ouverte à plus de monde
 2. Pour les lecteurs
 - Permettre d'avoir plus de choix
 - Découvrir plus facilement de nouveaux auteurs grâce aux avis
 - Pouvoir trier, filtrer et donc trouver ce qui nous intéresse plus facilement
-- 
 
+### Substitutions:
+- Substituer le papier par le digital
+- Manuscripts papier vers le digital, beaucoup moins de gaspi de papier par les ratures mais attention substituation à l'empreinte carbone
+- Permet d'éviter d'imprimer des manuscripts vers les maisons d'éditions
+
+### Effet rebond:
+- Avoir une copie papier et une copie numérique
+- Plus facile de lire des livres -> donc on en consomme plus
+  
 ## Sources statistiques
 - https://expandedramblings.com/index.php/wattpad-statistics-facts/
 - https://ao3demographicssurvey2024.tumblr.com/post/768677035317018624/the-ao3-demographics-survey-2024-was-an-unofficial
