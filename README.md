@@ -6,7 +6,7 @@ Notre utilisation personnelle de services de lecture et d'écriture en ligne con
 - 15 millions d'oeuvres écrites sur le site Archive of our Own
 
 
-## Utilité Social
+## Utilité Sociale
 - Pour la culture -> les livres alimentent depuis très longtemps la culture, les meurs et la morale
 - Pour la connaissance -> depuis longtemps les livres permettent de partager la connaissance et d'apprendre, d'étudier divers sujets
 - Pour le loisir et le bien-être -> les livres peuvent représenter une échappatoire à la dépression ou à un mal-être quelconque, donner des conseils de vie, permettre de relativiser sur notre existence, ou aider avec la confiance en soi
