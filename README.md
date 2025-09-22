@@ -12,6 +12,7 @@ Notre utilisation personnelle de services de lecture et d'écriture en ligne con
 - Pour le loisir et le bien-être -> les livres peuvent représenter une échappatoire à la dépression ou à un mal-être quelconque, donner des conseils de vie, permettre de relativiser sur notre existence, ou aider avec la confiance en soi
 - Pour l'expression de soi et des autres -> les livres permettent de s'exprimer, de découvrir différentes opinions, d'en discuter avec les autres, d'alimenter des débats
 - Pour la liberté d'expression -> pour notre chère constitution
+- Pour le climat -> réduit l'utilisation de papier, et utilise peut de consommation éléctrique comparer à d'autres divertissements
 
 ## Effets de la numérisation
 1. Pour les auteurs
