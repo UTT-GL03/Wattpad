@@ -1,8 +1,8 @@
 # Réduction de l'impact écologique du service numérique d'un site de lecture en ligne
 
 ## Choix du Sujet
-Notre utilisation personnelle de services de lecture et d'écriture en ligne constitue une valeur moyenne horaire de 20h/semaine. Ce qui est une grosse partie de notre consommation en ligne, non pas pour la consommation électrique mais la durée d'utilisation. Nous avons comme chiffre, un taux de 13% des répondant qui utilise un service de lecture de livre en ligne en 2023 (source plus bas).
-- Une augmentation significative durant la période COVID de lecteurs(ices) en ligne.
+Notre utilisation personnelle de services de lecture et d'écriture en ligne constitue une valeur moyenne horaire de 20h/semaine. Ce qui est une grosse partie de notre consommation en ligne, non pas pour la consommation électrique mais la durée d'utilisation. Nous avons constaté :
+- Une augmentation significative d'utilisation de services de lecture en ligne durant la période COVID de lecteurs(ices) en ligne.
 - 15 millions d'oeuvres écrites sur le site Archive of our Own
 
 
