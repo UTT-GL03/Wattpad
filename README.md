@@ -34,6 +34,33 @@ Notre utilisation personnelle de services de lecture et d'écriture en ligne con
 ### Effet rebond:
 - Avoir une copie papier et une copie numérique
 - Plus facile de lire des livres -> donc on en consomme plus
+
+## Scénarios d’usage et d’impacts
+
+Nous faisons l’hypothèse qu’une personne venant sur Wattpad est là pour découvrir, chercher, lire ou écrire des histoires. Pour le temps limité de la requête, nous estimerons que l’utilisateur ne lis ou écrit qu’un seul chapitre, en moins de quelques minutes (ce n’est évidement pas un reflets de la réalité).
+
+Nous ferons aussi la distinction entre la recherche et la lecture de livre dans deux sénarios distincts ainsi qu’un seul scénario pour l’écriture et un pour l'aspect communautaire avec l’écrit d’un commentaire.
+
+### Scénario 1 : Lire une histoire mise en favorite
+1. Le lecteur se connecte
+2. Le lecteur va sur son profil
+3. Le lecteur lit la nouvelle publication d’une histoire
+### Scénario 2 : Chercher une histoire avec différents filtre
+1. Le lecteur va sur la page d’accueil
+2. Le lecteur tape sa recherche dans la barre
+3. Le lecteur filtre sur sa recherche
+4. Le lecteur scroll (ne peut pas le simuler sur l’ecoindex)
+5. Le lecteur clique sur une histoire
+### Scénario 3 : Écrire une histoire
+1. L’auteur se connecte
+2. L’auteur va sur la page d’écriture
+3. L’auteur remplit son chapitre
+4. L’auteur publit son histoire
+### Scénario 4 : Écriture d’un commentaire
+1. L’auteur se connecte
+2. L’auteur consulte une de ses histoire favorite
+3. L’auteur laisse un j’aime
+4. L’auteur publie un commentaire
   
 ## Sources statistiques
 - https://expandedramblings.com/index.php/wattpad-statistics-facts/
