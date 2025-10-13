@@ -61,6 +61,33 @@ Nous ferons aussi la distinction entre la recherche et la lecture de livre dans 
 2. L’auteur consulte une de ses histoire favorite
 3. L’auteur laisse un j’aime
 4. L’auteur publie un commentaire
+
+## Modèle économique
+Écriture et lecture en ligne : oligopole~concurrence / des produits différenciés  (on ne retrouve pas les même oeuvre sur les même plateforme) mais homogènes au niveaux des services
+On peut soit:
+- se différencier avec notre esprit “sobre” sur la concurrence et instaurer de la qualité à travers des services, mais il faut trouver plus de fond
+- Proposer des changements Wattpad pour qu’ils réduisent leur consommation donc qu’ils deviennent plus sobre ou de les convaincre d’avoir un service pour l’environnement au sein de leur entreprise ⮞ améliorer la qualité ? / vente de formations ? / ajout de donations ?
+- Autre pratique de publicités qui ne se base pas sur les données des utilisateurs mais les tag d’une histoire pour savoir sur quoi s’intéresse une personne ⮞ des publicités à générer que sur des tags bien précis / plus facile de les choisir
+
+Masse salariale simplifiée ⮞ montant unitaire ⮞ quantité nécessaire pour financer un salaire
+Salaire médian 3569€
+
+⮞ ateliers des auteurs / formation vendu à 180€ / ans ⇒  ~238 formations vendu pour un salaire
+⮞ Ao3 campagne de don 2024 / https://archive.transformativeworks.org/admin_posts/30235 : 214 698,86 US$ par 6 955 personnes dans 81 pays différents ⇒ ~0,2 de la somme par mois de donation pour un salaire ⇒ 5 personnes
+⮞ Wattpad : 
+	abonnement premium / qualité donnée par les éditeurs dans le premium gratuite à lire par mois / fonctionnalités supplémentaire dans l’abonnement ⇒ ~6€ par mois 
+	/ wattpad coins (token)  / si l’histoire est finie depuis longtemps, payé pour la lire / 
+    / publicités et tracking l’auteur la rend payante, en ayant un contrat avec comission sur la plateforme
+    / Publicité pour l’auteur à rajouté sur ces livres ⇒ 
+    / token / wattpadcoins
+
+Publicité par les tags ⮞ moins de ciblage sur la personne mais sur les tags d’une histoire, avec une équipe intégrée pour les publicités (qu’ils aient le choix sur les publicités)
+⮞ leur demander d’améliorer leur recherches
+⮞ Faire de la formation d’écriture ⮞ des ateliers avec des auteurs agréger sur wattpad ayant déjà un contrat avec eux
+⮞ Un systèmes de donations ? difficile vu que ce sont des jeunes sur la plateformes
+⮞ Plusieurs types de warning et tags comme Ao3 ⮞ plus un problème d’éthique que d’environnement
+⮞ Subvention pour la culture et les livres
+⮞ crowdfounding ⮞ pour l’auteur pour continue à écrire ⮞ une partie qui est redonnée à la plateforme ⮞ si aucune publication de chapitre après un certain temps (parce que pas de don, ou autre) pendant trop de temps → histoire déclarée tenue en otage donc plus la possibilité d’utiliser ce moyen de financement jusqu’à retrouver un rythme de publication correcte
   
 ## Sources statistiques
 - https://expandedramblings.com/index.php/wattpad-statistics-facts/
