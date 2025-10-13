@@ -19,7 +19,7 @@
 4. Le lecteur scroll (changement de page de résultats sur AO3)
 5. Le lecteur clique sur une histoire
 
-|Date|Url                                                          |Nombre requÃªtes|Taille(kb)|Taille du dom|GES |Eau |ecoIndex|Note|
+|Date|Url                                                          |Nombre requêtes|Taille(kb)|Taille du dom|GES |Eau |ecoIndex|Note|
 |----|-------------------------------------------------------------|----------------|----------|-------------|----|----|--------|----|
 |2.1 |[Page d'accueil](https://archiveofourown.org/)               |33              |428       |612          |1.70|2.55|65.14   |C   |
 |2.2 |[Page de recherche](https://archiveofourown.org/works/search?work_search%5Bquery%5D=kira)|32              |803       |1953         |2.14|3.21|43.04   |D   |
@@ -34,7 +34,7 @@
 3. L’auteur remplit son chapitre
 4. L’auteur publie son histoire
 
-|Scénario|Url                                                          |Nombre requÃªtes|Taille(kb)|Taille du dom|GES |Eau |ecoIndex|Note|
+|Scénario|Url                                                          |Nombre requêtes|Taille(kb)|Taille du dom|GES |Eau |ecoIndex|Note|
 |--------|-------------------------------------------------------------|----------------|----------|-------------|----|----|--------|----|
 |3.1     |[Page d'accueil](https://archiveofourown.org/)               |30              |318       |319          |1.44|2.15|78.21   |B   |
 |3.1     |[Page de connexion](https://archiveofourown.org/users/login) |32              |738       |944          |1.92|2.88|54.07   |D   |
@@ -48,7 +48,7 @@
 3. L’auteur laisse un j’aime
 4. L’auteur publie un commentaire
 
-|Date|Url                                                          |Nombre requÃªtes|Taille(kb)|Taille du dom|GES |Eau |ecoIndex|Note|
+|Date|Url                                                          |Nombre requêtes|Taille(kb)|Taille du dom|GES |Eau |ecoIndex|Note|
 |----|-------------------------------------------------------------|----------------|----------|-------------|----|----|--------|----|
 |4.1 |[Page d'accueil](https://archiveofourown.org/)               |30              |320       |319          |1.44|2.15|78.20   |B   |
 |4.1 |[Page de connexion](https://archiveofourown.org/users/login) |32              |793       |982          |1.94|2.91|53.00   |D   |
