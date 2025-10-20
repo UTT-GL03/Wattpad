@@ -1,0 +1,29 @@
+{
+  "works": [
+    {{#repeat min=20 max=30}}
+    {
+      "tags": "{{random 'OS' 'AU' 'HS' 'H/C' 'H-C'}}",
+      "published": "{{date '2025-09-01' '2025-10-20' 'YYYY-MM-DD hh:mm'}}",
+      "author": "{{firstName}} {{lastName}}",
+      "work_title": "{{lorem min=3 max=20}}",
+      "chapters": [
+        {{#repeat min=1 max=30}}
+        {
+          "chapter_title" : "{{lorem min=1 max=5}}",
+          "content" : "{{#repeat min=1 max=15 comma=false}}{{lorem min=5 max=120}}\n\n{{/repeat}}",
+          "comments" : [
+            {{#repeat min=0 max=5}}
+            {
+              "comment_writer" : "{{firstName}} {{lastName}}",
+              "comment_content" : "{{lorem min=1 max=20}}",
+            }
+            {{/repeat}}
+          ]
+        }
+        {{/repeat}}
+      ],
+    }
+    {{/repeat}}
+  ]
+}
+
