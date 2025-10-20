@@ -3,6 +3,11 @@
   padding: 10px 20px;
   border-radius: 16px;
   font-size: smaller;
+  color: black;
+}
+
+h1 {
+  margin: 20px;
 }
 
 time {

@@ -20,11 +20,11 @@ function App() {
   )
 }
 
-function WorkHeadline({work_title, published, tag}) {
+function WorkHeadline({work_title, published, tags}) {
   return (
     <article>
       <header>
-        <span className="tag"> {tag} </span>
+        <span className="tag"> {tags} </span>
         <time> {published} </time>
       </header>
       <h2>{work_title}</h2>
