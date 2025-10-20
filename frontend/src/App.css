@@ -14,3 +14,12 @@ time {
   padding: 10px 20px;
   font-size: smaller;
 }
+
+address {
+  display: inline;
+  font-size: smaller;
+}
+
+a {
+  text-decoration: none;
+}
