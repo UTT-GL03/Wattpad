@@ -1,34 +1,22 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router'
 import data from './assets/sample_data.json'
+import WorkHeadlines from './WorkHeadlines.jsx'
 import './App.css'
 
 function App() {
 
   return (
-    <>
+    <BrowserRouter>
       <header>
         <h1>
           WATTPAD
         </h1>
       </header>
-      <main className="container">
-        {data.works.map((x, i) =>
-          <WorkHeadline {...x} key={i} />
-        )}
-      </main>
-    </>
-  )
-}
-
-function WorkHeadline({work_title, published, tags}) {
-  return (
-    <article>
-      <header>
-        <span className="tag"> {tags} </span>
-        <time> {published} </time>
-      </header>
-      <h2>{work_title}</h2>
-    </article>
+      <Routes>
+        <Route path="/" element= {<WorkHeadlines/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
