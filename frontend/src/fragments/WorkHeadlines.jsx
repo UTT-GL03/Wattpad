@@ -1,5 +1,5 @@
 import { Link } from 'react-router'
-import data from './assets/sample_data.json'
+import data from '../assets/sample_data.json'
 
 function WorkHeadlines() {
   return (
