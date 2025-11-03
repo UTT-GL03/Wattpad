@@ -102,6 +102,30 @@ Publicité par les tags ⮞ moins de ciblage sur la personne mais sur les tags d
 ⮞ Plusieurs types de warning et tags comme Ao3 ⮞ plus un problème d’éthique que d’environnement
 ⮞ Subvention pour la culture et les livres
 ⮞ crowdfounding ⮞ pour l’auteur pour continue à écrire ⮞ une partie qui est redonnée à la plateforme ⮞ si aucune publication de chapitre après un certain temps (parce que pas de don, ou autre) pendant trop de temps → histoire déclarée tenue en otage donc plus la possibilité d’utiliser ce moyen de financement jusqu’à retrouver un rythme de publication correcte
+
+## Maquette de l'interface et échantillon de données
+
+Les ressources Web possédant une représentation sur notre application seront de quatre types :
+- La page principale comporant la liste des oeuvres et un moyen de faire une recherche dans cette liste (ayant pour chemin `/`)
+- La page d'une oeuvre (ayant pour chemin `/work/{work_id}`)
+- La page de profile d'un auteur (ayant pour chemin `/author/{author_id}`)
+- La page d'un chapitre d'une oeuvre (ayant pour chemin `/work/{}`)
+
+![Maquette des quatre types de page](./benchmark/GL03_Maquettes.png)
+__Fig.1__: Maquette de l'interface du prototype
+
+Pour des raisons de respect des droits d'auteurs, nous utilisons des données générées (avec [`dummy-json`](https://dummyjson.com)).
+Bien que fictives, ces données correspondent à la structure des services concurrents : les articles comportent un titre possiblement long, un auteur et une rubrique (voir [modèle de données](https://github.com/UTT-GL03/Wattpad/blob/main/frontend/src/assets/sample_data.hbs)). 
+
+## Implémentation du scénario prioritaire
+
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| 1. Consulter les titre des oeuvres					   | 70 B 🟦 | 1,59 | 200 | 27 | 6799
+| 2. Ouvrir une oeuvre 			   | 92 A 🟦 | 1,15 |  51 | 19 | 4
+| 3. Ouvrir un chapitre	| 93 A 🟦 | 1,14 | 37 | 19 | 4
+| 4. Retourner a la page de l'oeuvre 		| 92 A 🟦 |  1,15|  51 | 19 | 4
+| 5. Ouvrir un autre chapitre 		| 93 A 🟦 |  1,14|  37 | 19 | 4
   
 ## Sources statistiques
 - https://expandedramblings.com/index.php/wattpad-statistics-facts/
