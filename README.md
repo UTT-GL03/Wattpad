@@ -68,11 +68,11 @@ L'EcoIndex d'une page (de A à G) est calculé en fonction du positionnement de 
 
 Nous avons choisi de comparer l'impact des scénarios sur les services de lecture et écriture en ligne. Nous avons choisi de faire une moyenne selon nos observations des mesures sur la classe finale, en prenant principalement en compte ce qui va être le plus utilisé (la lecture d'un chapitre)
 
-| **Service** | **Score sur 100** | **Classe** | **Détails des mesures** |
-|-------------|-------------------|------------|-------------------------|
-| Wattpad     | ~20                | ~F          | [...](wattpad.md)       |
-| AO3         | ~60                | ~C          | [...](ao3.md)           |
-| Atelier des auteurs| ~40         | ~D 		 | [...](atelierdauteur.md)
+| **Service** | **Score sur 100** | **Classe** | **Détails des mesures**             |
+|-------------|-------------------|------------|-------------------------------------|
+| Wattpad     | ~20                | ~F          | [...](benchmark/Wattpad/wattpad.md) |
+| AO3         | ~60                | ~C          | [...](benchmark/AO3/ao3.md)         |
+| Atelier des auteurs| ~40         | ~D 		 | [...](atelierdauteur.md)            
 
 
 
