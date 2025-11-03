@@ -2,15 +2,15 @@ import {Link, useParams} from 'react-router'
 import data from '../assets/sample_data.json'
 import Metadata from "../fragments/Metadata.jsx";
 
-function Chapter({num}) {
-    const {id} = useParams()
+function Chapter() {
+    const {work_id, chapter_id} = useParams()
     const {chapters, ...props} =
-        data.works.find(x => id === x.published)
+        data.works.find(x => +work_id === x.work_id)
     return (
         <main className="container">
             <section>
                 <Metadata {...props}></Metadata>
-                {chapters[num].content.split('\n\n').map((x,i) =>
+                {chapters[chapter_id].content.split('\n\n').map((x,i) =>
                     <p key={i}>
                         {x}
                     </p>
