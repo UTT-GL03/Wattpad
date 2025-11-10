@@ -126,7 +126,19 @@ Bien que fictives, ces données correspondent à la structure des services concu
 | 3. Ouvrir un chapitre	| 93 A 🟦 | 1,14 | 37 | 19 | 4
 | 4. Retourner a la page de l'oeuvre 		| 92 A 🟦 |  1,15|  51 | 19 | 4
 | 5. Ouvrir un autre chapitre 		| 93 A 🟦 |  1,14|  37 | 19 | 4
-  
+
+[Section à étoffer]
+
+## Mesures de la consommation énergétique lors du passage à l'échelle
+
+Maintenant que notre prototype est réaliste en termes de nombre de requêtes, nous pouvons simuler les effets du "passage à l'échelle". 
+
+Dans notre cas, l'augmentation de la quantité des données à traiter viendra de l'augmentation du nombre d'utilisateurs, qu'ils soient auteurs ou non (puisqu'il faut gérer leur compte), du nombre d'oeuvres archivées, ainsi que de  la quantité de commentaires.
+La gestion de ces données, bien que coûteuse du point de vue environnemental nous semble contribuer grandement à l'utilité sociale de la plateforme, que cela soit sur l'aspect d'archivage d'oeuvres ou l'aspect communautaire des interactions entre auteurs et lecteurs.
+Par conséquent notre projet continuera de gérer ces données.
+
+
+
 ## Sources statistiques
 - https://expandedramblings.com/index.php/wattpad-statistics-facts/
 - https://ao3demographicssurvey2024.tumblr.com/post/768677035317018624/the-ao3-demographics-survey-2024-was-an-unofficial
