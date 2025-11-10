@@ -38,4 +38,4 @@ jobs:
         with:
           args: http://localhost/ 200 30000 500
       - name: Run GreenIT Analysis CLI
-        run: greenit analyse --ci html --headless false scenarios/read_daily_articles.yml
+        run: greenit analyse --format html --ci scenarios/read_a_story.yml
