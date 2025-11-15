@@ -8,16 +8,17 @@ function Chapter() {
         data.works.find(x => +work_id === x.work_id)
     return (
         <main className="container">
-            <section>
+            <article className="container-fluid">
                 <Metadata {...props}></Metadata>
                 {chapters[chapter_id].content.split('\n\n').map((x,i) =>
                     <p key={i}>
                         {x}
                     </p>
                 )}
-            </section>
+            </article>
             <section>
-                <Link to={"/work/"}></Link>
+                {chapter_id > 0 && <Link to={"/work/"+work_id +"/"+(+chapter_id-1)}><button>Previous</button></Link>}
+                {chapter_id < chapters.length - 1 && <Link to={"/work/"+work_id +"/"+(+chapter_id+1)}><button>Next</button></Link>}
             </section>
         </main>
     )

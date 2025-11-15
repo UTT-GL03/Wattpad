@@ -9,7 +9,7 @@ import {AuthContext} from "./contexts.jsx";
 import {useState} from "react";
 
 function App() {
-    const [currentAuth, setAuth] = useState(true);
+    const [currentAuth, setAuth] = useState({author_id: null, logged: false});
 
     return (
         <BrowserRouter>

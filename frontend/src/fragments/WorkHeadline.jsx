@@ -1,4 +1,3 @@
-import { Link } from 'react-router'
 import Metadata from "./Metadata.jsx";
 function WorkHeadline(props) {
     const {published, summary, ..._} = props
