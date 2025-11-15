@@ -1,0 +1,14 @@
+# To be used with GreenIT Analysis CLI
+- name: Consulter les actualités
+  url: http://localhost/
+  actions:
+    - name: Choisir une oeuvre
+      type: click
+      element: .container > article > header > a
+      pageChange: true
+      waitForSelector: article > p
+    - name: Ouvrir un chapitre
+      type: click
+      element: .container > article > section > a
+      pageChange: true
+      waitForSelector: article > p
