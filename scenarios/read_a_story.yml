@@ -1,14 +1,17 @@
 # To be used with GreenIT Analysis CLI
-- name: Consulter les actualités
+- name: Lire un chapitre
   url: http://localhost/
   actions:
     - name: Choisir une oeuvre
       type: click
-      element: .container > article > header > a
+      element: .container > article > header > div > a
       pageChange: true
       waitForSelector: article > p
+    - name: Lire la liste des chapitres
+      type: scroll
     - name: Ouvrir un chapitre
       type: click
       element: .container > article > section > a
       pageChange: true
-      waitForSelector: article > p
+    - name: Lire le chapitres
+      type: scroll
