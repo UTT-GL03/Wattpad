@@ -133,13 +133,13 @@ Ce scénario nécessite de pouvoir naviguer entre trois types de page : la page 
 
 Nous avons développé les page des titres, des oeuvres et des chapitres (cf. Fig.2, Fig.3 et Fig.4) pour qu'elles affichent les échantillons de données sous une forme proche de ce que prévoyait la maquette.
 
-![Prototype de la page des titres](./benchmark/Screenshot_Page_Titres)
+![Prototype de la page des titres](./benchmark/Screenshot_Page_Titres.png)
 __Fig.2__: Prototype de la page des titres.
 
-![Prototype de la page d'oeuvre](./benchmark/Screenshot_Page_Oeuvre)
+![Prototype de la page d'oeuvre](./benchmark/Screenshot_Page_Oeuvre.png)
 __Fig.2__: Prototype de la page d'oeuvre.
 
-![Prototype de la page de chapitre](./benchmark/Screenshot_Page_Chapitre)
+![Prototype de la page de chapitre](./benchmark/Screenshot_Page_Chapitre.png)
 __Fig.2__: Prototype de la page de chapitre.
 
 Pour l'instant, nous avons choisi un *framework* de mise en page minimaliste ([*PicoCSS*](https://picocss.com)).
