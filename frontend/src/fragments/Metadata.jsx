@@ -15,6 +15,7 @@ function Metadata({work, work_id, author, canModify}) {
     console.log(work, author)
     return (
         <header className="container-fluid">
+            <div className="sub-container">
             {work && <>
                 <Link to={"/work/" + work.work_id}>
                     <h2>{work.work_title}</h2>
@@ -23,6 +24,7 @@ function Metadata({work, work_id, author, canModify}) {
                         <small>Modify</small>
                     </Link>}
             </>}
+            </div>
             <div className="sub-container">
                 {work && work.tags && <span className="tag"> {work.tags} </span>}
                 {author &&
