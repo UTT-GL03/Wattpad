@@ -1,11 +1,10 @@
 import Metadata from "./Metadata.jsx";
 function WorkHeadline(props) {
-    const {published, summary, ..._} = props
+    const {work, ...rest} = props;
   return (
-
     <article>
-        <Metadata {...props}></Metadata>
-      <p>{summary}</p>
+        <Metadata work={work} {...rest} ></Metadata>
+      <p>{work.summary}</p>
     </article>
   )
 }

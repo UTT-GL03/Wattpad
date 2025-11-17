@@ -1,12 +1,11 @@
-import WorkHeadlines from "../fragments/WorkHeadline.jsx";
-import data from "../assets/sample_data.json";
 import WorkHeadline from "../fragments/WorkHeadline.jsx";
-import Header from "../fragments/Header.jsx";
+import sendRequest from "../MockApiServer.js";
 function Library() {
+    const works = sendRequest("api/work?tri=published");
     return (
         <main className="container">
-            {data.works.map((x, i) =>
-                <WorkHeadline {...x} author={data.authors.find(s => s.author_id === x.author_id)} key={i} />
+            {works && works.map((x, i) =>
+                <WorkHeadline work={x} key={i} />
             )}
         </main>
     )

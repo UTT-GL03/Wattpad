@@ -19,7 +19,7 @@ function App() {
                     <Route path="/" element={<Library/>}/>
                     <Route path="/library" element={<Library/>}/>
                     <Route path="work/:work_id" element={<Work/>}/>
-                    <Route path="work/:work_id/:chapter_id" element={<Chapter/>}/>
+                    <Route path="work/:work_id/chapter/:chapter_id" element={<Chapter/>}/>
                     <Route path="author/:author_id" element={<Author/>}/>
                 </Routes>
             </AuthContext>

@@ -1,17 +1,16 @@
 import {AuthContext} from "../contexts.jsx";
 import {useContext} from "react";
-import {useNavigate, useParams} from "react-router";
-import data from "../assets/sample_data.json";
+import {useParams} from "react-router";
 import WorkHeadline from "../fragments/WorkHeadline.jsx";
+import sendRequest from "../MockApiServer.js";
 
 function Author() {
     const {author_id} = useParams();
     const auth = useContext(AuthContext);
-    console.log(auth, author_id);
-    const author =
-        data.authors.find(x => +author_id === x.author_id);
-    const works = data.works.filter(x => x.author_id !== +author_id);
+    const author = sendRequest("api/author/"+author_id);
+    const works = sendRequest("api/work?filter=author_id="+author_id);
     const is_current_author = auth.author_id === +author_id && auth.logged;
+    console.log(works);
 
     return (
         author === undefined && author_id === "null" &&
@@ -25,10 +24,10 @@ function Author() {
         </main>
     ) || (
         <main className="container">
-            <h2>{is_current_author && <span>Welcome back!</span>} {author.author_name}</h2>
+            <h2>{is_current_author ? <span>Welcome back!</span> : <span>Profil of</span>} {author.author_name}</h2>
             <section>
-                {works.map((x, i) =>
-                    <WorkHeadline {...x} key={i} canModify={is_current_author} />
+                {works && works.map((x) =>
+                    <WorkHeadline work={x} author={author} key={x.work_id} canModify={is_current_author} />
                 )}
             </section>
         </main>

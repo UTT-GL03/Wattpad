@@ -2,7 +2,7 @@
   background-color: #ddd;
   padding: 10px 20px;
   border-radius: 16px;
-  font-size: smaller;
+  font-size: .8em;
   color: black;
 }
 
@@ -11,15 +11,20 @@ h1 {
 }
 
 time {
-  padding: 10px 20px;
-  font-size: smaller;
+  font-size: .8em;
 }
 
 address {
   display: inline;
-  font-size: smaller;
+  font-size: .8em;
 }
 
 a {
   text-decoration: none;
+}
+
+.sub-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
 }
