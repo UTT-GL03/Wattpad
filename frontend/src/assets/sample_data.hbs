@@ -1,6 +1,6 @@
 {
     "authors": [
-    {{#repeat 20}}
+    {{#repeat 100}}
         {
         "author_name":"{{firstName}} {{lastName}}",
         "author_id": {{@index}}
@@ -8,7 +8,7 @@
     {{/repeat}}
     ],
     "works": [
-        {{#repeat min=20 max=30}}
+        {{#repeat min=100 max=200}}
             {
             "tags": "{{random 'OS' 'AU' 'HS' 'H/C' 'H-C'}}",
             "published": "{{date '2025-09-01' '2025-12-20' 'unix'}}",
@@ -17,7 +17,7 @@
             "work_id": {{@index}},
             "summary": "{{lorem min=10 max=100}}",
             "chapters": [
-                {{#repeat min=1 max=30}}
+                {{#repeat min=5 max=30}}
                     {
                         "chapter_title" : "{{lorem min=1 max=5}}",
                         "chapter_id" : {{@index}},

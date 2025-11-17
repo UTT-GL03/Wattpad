@@ -1,17 +1,27 @@
 # To be used with GreenIT Analysis CLI
-- name: Lire un chapitre
+- name: Lire un chapitre v2
   url: http://localhost/
   actions:
+    - name: Consulter les titres des oeuvres
+      waitForSelector: .work-headline
     - name: Choisir une oeuvre
       type: click
-      element: .container > article > header > div > a
+      element: .link-work
       pageChange: true
-      waitForSelector: article > p
-    - name: Lire la liste des chapitres
-      type: scroll
+      waitForSelector: .work-page
+    #- name: Lire la liste des chapitres
+    #  type: scroll
     - name: Ouvrir un chapitre
       type: click
-      element: .container > article > section > a
+      element: .link-chapter
       pageChange: true
-    - name: Lire le chapitres
-      type: scroll
+      waitForSelector: .chapter-page
+    #- name: Lire le chapitre
+      #type: scroll
+    - name: Passer au chapitre suivant
+      type: click
+      element: .link-next
+      pageChange: true
+    #  waitForSelector: .chapter-page
+    #- name: Lire le chapitre
+     # type: scroll

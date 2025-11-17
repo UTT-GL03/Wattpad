@@ -5,10 +5,15 @@ import {useEffect, useState} from "react";
 
 function Work() {
     const {work_id} = useParams();
-    let [work, setWork] = useState(null);
+    let [work, setWork] = useState();
+    let [author, setAuthor] = useState();
     useEffect(() => {
-        sendRequest("api/work/"+work_id).then(r => setWork(r));
-    }, [work]);
+        fetch("/sample_data.json").then(r=> r.json()).then(r => {
+            const work = r.works.find(w => w.work_id === +work_id)
+            setWork(work);
+            setAuthor(r.authors.find(a => a.author_id === +work.author_id));
+        })
+    }, [work_id]);
     /* TODO: plus tard,
      ** - ajouter le composant headline chapter (ajout plus facilement publier ou non et séparer la logique des composant pour l'appel work)
      ** - séparer dans les ressources les chapitres des ouvrages
@@ -17,19 +22,21 @@ function Work() {
     */
     return (
         <main className="container">
-            <article>
-                <Metadata work={work} ></Metadata>
+            {work &&
+            <article className="work-page">
+                <Metadata work={work} author={author} ></Metadata>
                 <p>{work.summary}</p>
                 <section>
                     {work.chapters.map(x => x["chapter_title"]).map((x,i) =>
-                        <Link key={i} to={"/work/" + work_id + "/chapter/" + i}>
+                        <Link className="link-chapter" key={i} to={"/work/" + work_id + "/chapter/" + i}>
                             <h3>
                                 {x}
                             </h3>
                         </Link>
                     )}
                 </section>
-            </article>
+            </article>}
+            {!work && <h2>This work was not found</h2>}
         </main>
     )
 }

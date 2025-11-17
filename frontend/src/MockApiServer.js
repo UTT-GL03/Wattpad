@@ -6,8 +6,9 @@ import dummyjson from 'dummy-json';
 const mockData = JSON.parse(dummyData);
 console.log("const mockData", mockData);*/
 function sendRequest(uri) {
-    return fetch("sample_data.json").then(r => r.json()).then(r => {
-            console.log(r)
+    return fetch("/sample_data.json").then(r => {
+        return r.json();
+    }).then(r => {
             const mockData = r;
             uri = new URL(uri, "https://www.test.com");
             const parameters = uri.searchParams;

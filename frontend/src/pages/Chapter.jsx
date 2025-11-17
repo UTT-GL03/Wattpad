@@ -5,14 +5,22 @@ import {useEffect, useState} from "react";
 
 function Chapter() {
     const {work_id, chapter_id} = useParams()
-    let [chapter, setChapter] = useState(null);
+    let [chapter, setChapter] = useState();
+    let [author, setAuthor] = useState();
+    let [work, setWork] = useState();
     useEffect(() => {
-        sendRequest("api/work/"+work_id+"/chapter/"+chapter_id).then(r => setChapter(r));
-    }, [chapter]);
+        fetch("/sample_data.json").then(r=> r.json()).then(r => {
+            const work = r.works.find(w => w.work_id === +work_id)
+            setWork(work);
+            setAuthor(r.authors.find(a => a.author_id === +work.author_id));
+            setChapter(work.chapters.find(c => c.chapter_id === +chapter_id));
+        })
+    }, [work_id, chapter_id]);
     return (
         <main className="container">
-            <article>
-                <Metadata {...chapter}></Metadata>
+            {chapter && <>
+            <article className="chapter-page">
+                <Metadata work={work} author={author}></Metadata>
                 <h2>{chapter.chapter_title}</h2>
                 <section>
                     {chapter.content.split('\n\n').map((x,i) =>
@@ -23,9 +31,11 @@ function Chapter() {
                 </section>
             </article>
             <section className="sub-container">
-                {chapter_id > 0 && <Link to={"/work/"+work_id +"/chapter/"+(+chapter_id-1)}><button>Previous</button></Link>}
-                {chapter_id < chapter.metrics.chapters - 1 && <Link to={"/work/"+work_id +"/chapter/"+(+chapter_id+1)}><button>Next</button></Link>}
+                {chapter_id > 0 && <Link className="link-prev" to={"/work/"+work_id +"/chapter/"+(+chapter_id-1)}><button>Previous</button></Link>}
+                {chapter_id < work.chapters.length - 1 && <Link className="link-next" to={"/work/"+work_id +"/chapter/"+(+chapter_id+1)}><button>Next</button></Link>}
             </section>
+            </>}
+            {!chapter && <h2>This chapter was not found</h2>}
         </main>
     )
 }
