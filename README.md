@@ -74,6 +74,7 @@ Nous avons choisi de comparer l'impact des scénarios sur les services de lectur
 | AO3         | ~60                | ~C          | [...](benchmark/AO3/ao3.md)         |
 | Atelier des auteurs| ~40         | ~D 		 | [...](atelierdauteur.md)            
 
+__Tab.1__: Mesure de l'écoindex moyen des services de lecture et écriture en ligne
 
 
 ## Modèle économique
@@ -119,6 +120,34 @@ Bien que fictives, ces données correspondent à la structure des services concu
 
 ## Implémentation du scénario prioritaire
 
+### Étape de prototypage : Données chargées de manière statique
+
+Pour cette première version du prototype (`v1.0.0`) :
+
+- l'échantillon de données est encore chargé dans le code de manière statique,
+- les fonctionnalités implémentées ne sont que celles nécessaires pour suivre le scénario prioritaire ("Lire une oeuvre").
+
+Ce scénario nécessite de pouvoir naviguer entre trois types de page : la page des titres, les pages des oeuvres et les pages des chapitres.
+
+### Page des titres
+
+Nous avons développé les page des titres, des oeuvres et des chapitres (cf. Fig.2, Fig.3 et Fig.4) pour qu'elles affichent les échantillons de données sous une forme proche de ce que prévoyait la maquette.
+
+![Prototype de la page des titres](./benchmark/Screenshot_Page_Titres.png)
+__Fig.2__: Prototype de la page des titres.
+
+![Prototype de la page d'oeuvre](./benchmark/Screenshot_Page_Oeuvre.png)
+__Fig.2__: Prototype de la page d'oeuvre.
+
+![Prototype de la page de chapitre](./benchmark/Screenshot_Page_Chapitre.png)
+__Fig.2__: Prototype de la page de chapitre.
+
+Pour l'instant, nous avons choisi un *framework* de mise en page minimaliste ([*PicoCSS*](https://picocss.com)).
+Dans la suite du projet, nous verrons si l'impact environnemental du passage à un *framework* de mise en page plus puissant (comme [*Bootstrap*](https://getbootstrap.com)) est acceptable.
+
+Dans l'état actuel du prototype, il est possible d'avoir une première idée de l'impact environnemental du *frontend*.
+Bien entendu, il manque encore le chargement dynamique des données, mais nous pouvons déjà évaluer l'impact de l'affichage des données et du *framework* (Tab.2).
+
 |   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|------------:|--------------:|---------:|---------------------:
 | 1. Consulter les titre des oeuvres					   | 70 B 🟦 | 1,59 | 200 | 27 | 6799
@@ -127,7 +156,19 @@ Bien que fictives, ces données correspondent à la structure des services concu
 | 4. Retourner a la page de l'oeuvre 		| 92 A 🟦 |  1,15|  51 | 19 | 4
 | 5. Ouvrir un autre chapitre 		| 93 A 🟦 |  1,14|  37 | 19 | 4
 
-[Section à étoffer]
+__Tab.2__: Évaluation de l'impact du scénario "Lire une oeuvre" dans le prototype v1.0.0. 
+
+Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec celles des services concurrents (Tab.1) vues précédemment.
+
+Si nous arrivons à maintenir les émissions en dessous de 1,5 g par page pour notre produit minimum viable, nous pouvons donc espérer proposer une alternative moins impactante que AO3 et jusqu'à deux fois moins impactante que Wattpad.
+
+### Étape de prototypage : Données statiques chargées de manière dynamique
+
+Pour cette nouvelle version du prototype (`v1.0.1`), identique du point de vue fonctionnel, les données (toujours statiques) sont désormais chargées par le *frontend* à travers le réseau immédiatement après un premier affichage à vide.
+Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire par page affichée. 
+
+Concernant l'évaluation de l'impact environnemental du scénario, par rapport au tableau précédent (cf. Tab.2), le tableau est sensiblement le même.
+
 
 ## Mesures de la consommation énergétique lors du passage à l'échelle
 
