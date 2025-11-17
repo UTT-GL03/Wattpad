@@ -2,15 +2,20 @@ import mockFileData from './assets/sample_data.hbs?raw';
 import dummyjson from 'dummy-json';
 
 //const mockFileData = fs.readFileSync('assets/sample_data.hbs', { encoding: 'utf8' });
-const dummyData = dummyjson.parse(mockFileData).replaceAll("undefined", "");
+/*const dummyData = dummyjson.parse(mockFileData).replaceAll("undefined", "");
 const mockData = JSON.parse(dummyData);
-console.log("const mockData", mockData);
+console.log("const mockData", mockData);*/
 function sendRequest(uri) {
-    uri = new URL(uri, "https://www.test.com");
-    const parameters = uri.searchParams;
-    const resourcePath = uri.pathname.split("/").slice(2);
-    const resource = parseResource(mockData, resourcePath);
-    return parseParameters(resource, parameters);
+    return fetch("sample_data.json").then(r => r.json()).then(r => {
+            console.log(r)
+            const mockData = r;
+            uri = new URL(uri, "https://www.test.com");
+            const parameters = uri.searchParams;
+            const resourcePath = uri.pathname.split("/").slice(2);
+            const resource = parseResource(mockData, resourcePath);
+            return parseParameters(resource, parameters);
+        }
+    );
 }
 
 function parseResource(mockData, resourcePath) {

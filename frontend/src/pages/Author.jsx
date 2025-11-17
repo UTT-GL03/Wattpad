@@ -1,5 +1,5 @@
 import {AuthContext} from "../contexts.jsx";
-import {useContext} from "react";
+import {useContext, useEffect, useState} from "react";
 import {useParams} from "react-router";
 import WorkHeadline from "../fragments/WorkHeadline.jsx";
 import sendRequest from "../MockApiServer.js";
@@ -7,8 +7,14 @@ import sendRequest from "../MockApiServer.js";
 function Author() {
     const {author_id} = useParams();
     const auth = useContext(AuthContext);
-    const author = sendRequest("api/author/"+author_id);
-    const works = sendRequest("api/work?filter=author_id="+author_id);
+    let [author, setAuthor] = useState(null);
+    let [works, setWorks] = useState(null);
+    useEffect(() => {
+        sendRequest("api/author/"+author_id).then(r => setAuthor(r))
+        sendRequest("api/work?filter=author_id="+author_id).then(r => setWorks(r));
+    }, [author]);
+
+
     const is_current_author = auth.author_id === +author_id && auth.logged;
     console.log(works);
 

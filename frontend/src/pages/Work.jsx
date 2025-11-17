@@ -1,11 +1,14 @@
 import {Link, useParams} from 'react-router'
 import Metadata from "../fragments/Metadata.jsx";
 import sendRequest from "../MockApiServer.js";
+import {useEffect, useState} from "react";
 
 function Work() {
     const {work_id} = useParams();
-    const work = sendRequest("api/work/"+work_id);
-    console.log(work);
+    let [work, setWork] = useState(null);
+    useEffect(() => {
+        sendRequest("api/work/"+work_id).then(r => setWork(r));
+    }, [work]);
     /* TODO: plus tard,
      ** - ajouter le composant headline chapter (ajout plus facilement publier ou non et séparer la logique des composant pour l'appel work)
      ** - séparer dans les ressources les chapitres des ouvrages

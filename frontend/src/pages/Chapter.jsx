@@ -1,10 +1,14 @@
 import {Link, useParams} from 'react-router'
 import Metadata from "../fragments/Metadata.jsx";
 import sendRequest from "../MockApiServer.js";
+import {useEffect, useState} from "react";
 
 function Chapter() {
     const {work_id, chapter_id} = useParams()
-    const chapter = sendRequest("api/work/"+work_id+"/chapter/"+chapter_id);
+    let [chapter, setChapter] = useState(null);
+    useEffect(() => {
+        sendRequest("api/work/"+work_id+"/chapter/"+chapter_id).then(r => setChapter(r));
+    }, [chapter]);
     return (
         <main className="container">
             <article>
