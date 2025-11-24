@@ -122,7 +122,7 @@ Bien que fictives, ces données correspondent à la structure des services concu
 
 ### Étape de prototypage : Données chargées de manière statique
 
-Pour cette première version du prototype (`v1.0.0`) :
+Pour cette première version du prototype (`v1.1.0`) :
 
 - l'échantillon de données est encore chargé dans le code de manière statique,
 - les fonctionnalités implémentées ne sont que celles nécessaires pour suivre le scénario prioritaire ("Lire une oeuvre").
@@ -150,13 +150,13 @@ Bien entendu, il manque encore le chargement dynamique des données, mais nous p
 
 |   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
 |---|--------:|------------:|--------------:|---------:|---------------------:
-| 1. Consulter les titre des oeuvres					   | 70 B 🟦 | 1,59 | 200 | 27 | 6799
+| 1. Consulter les titres des oeuvres					   | 70 B 🟩 | 1,59 | 200 | 27 | 6799
 | 2. Ouvrir une oeuvre 			   | 92 A 🟦 | 1,15 |  51 | 19 | 4
 | 3. Ouvrir un chapitre	| 93 A 🟦 | 1,14 | 37 | 19 | 4
 | 4. Retourner a la page de l'oeuvre 		| 92 A 🟦 |  1,15|  51 | 19 | 4
 | 5. Ouvrir un autre chapitre 		| 93 A 🟦 |  1,14|  37 | 19 | 4
 
-__Tab.2__: Évaluation de l'impact du scénario "Lire une oeuvre" dans le prototype v1.0.0. 
+__Tab.2__: Évaluation de l'impact du scénario "Lire une oeuvre" dans le prototype v1.1.0. 
 
 Ces estimations bien qu'artificiellement basses (puisque les données sont chargées de manière statique) sont tout de même à comparer avec celles des services concurrents (Tab.1) vues précédemment.
 
@@ -164,11 +164,18 @@ Si nous arrivons à maintenir les émissions en dessous de 1,5 g par page pour n
 
 ### Étape de prototypage : Données statiques chargées de manière dynamique
 
-Pour cette nouvelle version du prototype (`v1.0.1`), identique du point de vue fonctionnel, les données (toujours statiques) sont désormais chargées par le *frontend* à travers le réseau immédiatement après un premier affichage à vide.
+Pour cette nouvelle version du prototype (`v1.2.0`), les données (toujours statiques) sont désormais chargées par le *frontend* à travers le réseau immédiatement après un premier affichage à vide.
 Ce comportement, plus réaliste, n'a pour effet qu'une requête supplémentaire par page affichée. 
 
-Concernant l'évaluation de l'impact environnemental du scénario, par rapport au tableau précédent (cf. Tab.2), le tableau est sensiblement le même.
+Concernant l'évaluation de l'impact environnemental du scénario, par rapport au tableau précédent (cf. Tab.2), on remarque que l'écoindex est l"=égèrement plus bas partout sauf pour le premier chargement de page. Ce qu'on gagne en ne chanargeant pas les données directement au chargement de la page, on le perd en les chargeant au fur et à mesure.
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| 1. Consulter les titres des oeuvres					   | 89 A 🟦 | 1,22 | 16 | 3 | 497,57
+| 2. Ouvrir une oeuvre 			   | 83 A 🟦 | 1,34 |  46 | 1 | 1543,388
+| 3. Ouvrir un chapitre	| 84 A 🟦 | 1,32 | 36 | 1 | 1543,388
+| 4. Passer au chapitre suivant 		| 93 A 🟦 |  1,14|  38 | 0 | 0
 
+__Tab.3__: Évaluation de l'impact du scénario "Lire une oeuvre" dans le prototype v1.2.0. 
 
 ## Mesures de la consommation énergétique lors du passage à l'échelle
 
@@ -177,6 +184,35 @@ Maintenant que notre prototype est réaliste en termes de nombre de requêtes, n
 Dans notre cas, l'augmentation de la quantité des données à traiter viendra de l'augmentation du nombre d'utilisateurs, qu'ils soient auteurs ou non (puisqu'il faut gérer leur compte), du nombre d'oeuvres archivées, ainsi que de  la quantité de commentaires.
 La gestion de ces données, bien que coûteuse du point de vue environnemental nous semble contribuer grandement à l'utilité sociale de la plateforme, que cela soit sur l'aspect d'archivage d'oeuvres ou l'aspect communautaire des interactions entre auteurs et lecteurs.
 Par conséquent notre projet continuera de gérer ces données.
+
+Nous avons mis 100 auteurs et entre 100 et 200 oeuvres pour le passage à l'échelle.
+
+### Évolution de l'EcoIndex lors du passage à l'échelle
+
+Produites désormais de manière automatique lors de l'intégration continue, les mesures nécessaires à la production de l'EcoIndex, [avant](https://github.com/UTT-GL03/QVOTIDIE/actions/runs/19211909192/artifacts/4512754147) et [après](https://github.com/UTT-GL03/QVOTIDIE/actions/runs/19224015758/artifacts/4516341581) la simulation du passage à l'échelle retraduisent bien (cf. Tab.6) l'augmentation du poids des téléchargements, mais aussi de l'augmentation du nombre d'éléments de la page des titres.
+
+|   | EcoIndex| GES (gCO2e) | Taille du DOM | Requêtes | Taille de la page (ko)
+|---|--------:|------------:|--------------:|---------:|---------------------:
+| 1. Consulter les titres des oeuvres 					   | <del>89 A 🟦</del><br/>35 E 🟥 | <del>1,22</del><br/>2,3 | <del>16</del><br/>1468 | <del>3</del><br/>5 | <del>497,57</del><br/>10280,453
+| 2. Ouvrir une oeuvre 			   | <del>83 A 🟦</del><br/>75 B 🟩 | <del>1,34</del><br/>1,5 | <del>46</del><br/>60 | 1 | <del>1543,388</del><br/>9781,171
+| 3. Ouvrir un chapitre	| <del>84 A 🟦</del><br/>76 A 🟦 | <del>1,32</del><br/>1,48 | <del>36</del><br/>45 | 1 | <del>1543,388</del><br/>	9781,171
+| 4. Passer au chapitre suivant 		| 93 A 🟦 |  1,14 | <del>38</del><br/>47 | 0 | 0
+
+__Tab.4__: Effet du passage à l'échelle sur l'impact du scénario "Lire une oeuvre" dans le prototype v1.2.1.
+
+On pourrait s'étonner que la baisse de l'EcoIndex soit beaucoup plus forte pour la page des titres que pour la page d'un article alors que l'augmentation du poids des téléchargements est analogue.
+Ceci s'explique par le fait que l'EcoIndex vise à évaluer un impact global, incluant une part de la fabrication et de la fin de vie des terminaux, et que cette part augmente avec le nombre d'éléments de la page.
+Pour évaluer plus précisément l'impact de la consultation elle-même nous utiliserons un autre outil de mesure : GreenFrame.
+
+### Mesure de la consommation énergétique liée à la consultation
+
+Le logiciel GreenFrame est capable d'estimer, pour les différents composants de l'architecture, la consommation énergétique :
+
+- du CPU (à partir du temps de calcul),
+- de la mémoire vive (à partir de la taille des données mémorisées),
+- du disque (à partir de la taille des données lues et écrites),
+- du réseau (à partir de la taille des données reçues et envoyées),
+- pour le navigateur uniquement, de l'écran (à partir du temps d'exécution du scénario).
 
 
 
