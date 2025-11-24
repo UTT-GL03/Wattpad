@@ -8,4 +8,4 @@ scenarios:
   - name: Consulter un chapitre
     path: ./scenarios/consult_chapter_page.js
 containers:
-  - qvotidie-static_hosting-1
+  - wattpad-static_hosting-1
