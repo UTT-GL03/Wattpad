@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: EcoIndex
-          path: Read_A_Story.html
+          path: scenarios/Read_A_Story.html
   measure_energy_consumption:
       needs: build
       runs-on: ubuntu-latest
@@ -69,9 +69,9 @@ jobs:
             yarn build 
         - name: Run GreenFrame CLI
           run: |
-            ./greenframe-cli-post-app/bin/run analyze > Consumption.txt
+            ./greenframe-cli-post-app/bin/run analyze > scenarios/Consumption.txt
         - name: Save results
           uses: actions/upload-artifact@v4
           with:
             name: Consumption
-            path: Consumption.txt
+            path: scenarios/Consumption.txt
