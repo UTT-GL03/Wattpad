@@ -1,0 +1,11 @@
+baseURL: http://localhost
+projectName: Wattpad
+scenarios:
+  - name: Consulter les titres d'oeuvres
+    path: ./scenarios/consult_title_page.js
+  - name: Consulter une oeuvre
+    path: ./scenarios/consult_work_page.js
+  - name: Consulter un chapitre
+    path: ./scenarios/consult_chapter_page.js
+containers:
+  - qvotidie-static_hosting-1
