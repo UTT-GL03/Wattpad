@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v5
       - name: Generate sample
         run: |
-          npx --yes dummy-json sample_data.hbs > /frontend/public/sample_data.json
+          npx --yes dummy-json sample_data.hbs > ./frontend/public/sample_data.json
       - name: Save samples for later
         uses: actions/upload-artifact@v4
         with:
