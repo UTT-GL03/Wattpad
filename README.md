@@ -247,6 +247,38 @@ De fait, les trois éléments ayant le plus d'impact (à peu près à égalité,
 Afin de réduire l'impact énérgétique du réseau, nous stockons désormais les données de l'application (`v2.0.0`) dans une base de données (*CouchDB*).
 Cette évolution nous permet, lors de l'affichage d'une oeuvre, de charger une seule oeuvre plutôt que 200.
 
+|                    | cpu (s)    | mem (B) | disk (B) | screen (s) | network (B) | total (Wh)   |
+| ------------------ | ---------- | ---------- | --------| -------- | ----------- | ------------ |
+| Navigateur | <del>0,0014</del><br/><add>0,0013</add>|  <del>0,000062</del><br/><add>0,000058</add> | 0,0 | <del>0,057</del><br/><add>0,078</add> | <del>0,68</del><br/><add>0,067</add> | <del>0,13</del><br/><add>0,15</add>  |
+| Serveur Web | <del>0,000015</del><br/><add>0,000019</add> |  <del>0,0000029</del><br/><add>0,0000029</add> | 0,0  | <del>0,057</del><br/><add>0,078</add> | 0,0 | <del>0,057</del><br/><add>0,078</add> |
+| Base de données | <del>0,0</del><br/><add>0,00066</add> |  <del>0,0</del><br/><add>0,000067</add> | 0,0 | 0,0| 0,0 | <del>0,0</del><br/><add>0,00073</add> |
+
+__Tab.6__: Effet sur l'utilisation des ressources de l'introduction d'une base de données dans l'application, lors de la consultation d'une oeuvre.
+
+Cette amélioration (cf. Tab.6) est ne semble pas causer de changement significatifs. On peut cependant noter une utilisation des ressources par la base de données négligeable excepté une consommation très importante de mémoire vive (30 fois la quantité nécessaire pour le serveur Web).
+
+
+ (Consulter les titres d'oeuvres)              | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
+| --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur      | <del>0,022</del><br/>0,031     | <del>0,00011</del><br/>0,00014   | 0,0       | <del>0,057</del><br/>0,078 | <del>0,11</del><br/>0,13 | <del>0,19</del><br/>0,24  |
+| Serveur Web     | <del>0,000015</del><br/>0,000019 | <del>0,0000046</del><br/>0,0000053 | 0,0 | <mark><del>0,057</del></mark><br/>0,078 | 0,0 | <del>0,057</del><br/>0,078 |
+| Base de données | <del>0</del><br/>0,0012 | <del>0</del><br/>0,00012 | 0,0 | <del>0</del><br/><mark>0,00000013</mark> | 0,0 | <del>0</del><br/>0,0013 |
+
+| (Consulter un chapitre)             | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh)        | total (Wh) |
+| --------------- | ---------- | ---------- | --------- | ------------------ | ------------------ | ---------- | 
+| Navigateur      | <del>0,0016</del><br/>0,0013 | <del>0,000062</del><br/>0,000058 | 0,0 | <del><mark>0,057</mark></del><br/>0,078 | <mark>0,69</mark> | <del>0,13</del><br/>0,15 |
+| Serveur Web     | <del>0,000014</del><br/>0,000017 | <del>0,0000029</del><br/>0,0000029 | 0,0 | <del><mark>0,057</mark></del><br/>0,080 | 0,0 | <del>0,057</del><br/>0,080 |
+| Base de données | <del>0</del><br/>0,00059 | <del>0</del><br/>0,000067 | 0,0 | 0,0 | 0,0 | <del>0</del><br/>0,00065 |
+
+__Tab.7__: Effet sur la consommation énergétique de l'introduction d'une base de données dans l'application, lors de la consultation des titres d'oeuvres (premier tableau) et d'un chapitre (second tableau).
+
+On peut remarquer que l'ajout de la base de données est relativement négligeable puisqu'elle consomme peut et de semble pas causer de changements significatifs.
+
+Il est possible que nos données soient en trop petit nombre pour voir un changement significatif prendre place.
+
+
+
+
 
 ## Sources statistiques
 - https://expandedramblings.com/index.php/wattpad-statistics-facts/
