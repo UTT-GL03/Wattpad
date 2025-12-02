@@ -9,3 +9,4 @@ scenarios:
     path: ./scenarios/consult_chapter_page.js
 containers:
   - wattpad-static_hosting-1
+  - wattpad-backend-1
