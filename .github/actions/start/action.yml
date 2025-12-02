@@ -25,7 +25,7 @@ runs:
         name: samples
     - name: Upload samples
       run: |
-        curl -X POST http://localhost:5984/wattpad/_bulk_docs -H "Content-Type: application/json" -d @sample_data.json
+        curl -X POST http://localhost:5984/wattpad/_bulk_docs -H "Content-Type: application/json" -d @./frontend/public/sample_data.json
       shell: bash
     - name: Wait for backend
       uses: docker://benel/wait-for-response:1
