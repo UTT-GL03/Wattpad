@@ -221,17 +221,15 @@ Le logiciel GreenFrame est capable d'estimer, pour les différents composants de
 | Navigateur         | 0.022     | 0.00011   | 0.0       | <mark>0.057</mark> | <mark>0.11</mark> | 0.19  |
 | Serveur Web        | 0.000015   | 0.0000046   | 0.0       | <mark>0.057</mark> | 0.0                | 0.057 |
 
+ (Consulter une oeuvre)                 | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
+| ------------------ | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur         | 0.0014     | 0.000062   | 0.0       | <mark>0.057</mark> | <mark>0.68</mark> | 0.13  |
+| Serveur Web        | 0.000015   | 0.0000029   | 0.0       | <mark>0.057</mark> | 0.0                | 0.057 |
 
-
- (Consulter une oeuvre)                  │ cpu (Wh)   │ mem (Wh)    │ disk (Wh) │ network (Wh) │ screen (Wh) │ total (Wh) 
-| ------------------ | ----------: | ----------: | ---------: | ------------------: | -----------: | ------------: 
-| Navigateur         | '0.0014'   │ '0.000062'  │ '0.0'     │ <mark>'0.057'</mark>      │ '0.068'     │ '0.13'     
-| Serveur Web        | '0.000015' │ '0.0000029' │ '0.0'     │ <mark>'0.057'</mark>      │ '0.0'       │ '0.057'   
-
-│ (Consulter un chapitre)                  │ cpu (Wh)   │ mem (Wh)    │ disk (Wh) │ network (Wh) │ screen (Wh) │ total (Wh) 
-| ------------------ | ----------: | ----------: | ---------: | ------------------: | -----------: | ------------: 
-| Navigateur         | '0.0016'   │ '0.000062'  │ '0.0'     │ <mark>'0.057'</mark>      │ '0.069'     │ '0.13'     
-| Serveur Web        | '0.000014' │ '0.0000029' │ '0.0'     │ <mark>'0.057'</mark>      │ '0.0'       │ '0.057'    
+ (Consulter un chapitre)                 | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
+| ------------------ | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur         | 0.0016     | 0.000062   | 0.0       | <mark>0.057</mark> | <mark>0.69</mark> | 0.13  |
+| Serveur Web        | 0.000014   | 0.0000029   | 0.0       | <mark>0.057</mark> | 0.0                | 0.057 |
 
 __Tab.5__: Estimation de la consommation énergétique de la consultation de chaque type de page.
 
