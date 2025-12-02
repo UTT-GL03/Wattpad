@@ -1,15 +1,14 @@
 import {Link} from "react-router";
 
 function Metadata({work, author, canModify}) {
-    console.log(work)
     return (
         <header className="container-fluid">
             <div className="sub-container">
             {work && <>
-                <Link className="link-work" to={"/work/" + work.work_id}>
+                <Link className="link-work" to={"/work/" + work._id}>
                     <h2>{work.work_title}</h2>
                 </Link>
-                {canModify && <Link to={"/work/" + work.work_id+"#modify"}>
+                {canModify && <Link to={"/work/" + work._id+"#modify"}>
                         <small>Modify</small>
                     </Link>}
             </>}
@@ -17,7 +16,7 @@ function Metadata({work, author, canModify}) {
             <div className="sub-container">
                 {work && work.tags && <span className="tag"> {work.tags} </span>}
                 {author &&
-                    <Link className="link-author" to={"/author/"+author.author_id}>
+                    <Link className="link-author" to={"/author/"+author._id}>
                         {author && <address> {author.author_name} </address>}
                     </Link>
                 }

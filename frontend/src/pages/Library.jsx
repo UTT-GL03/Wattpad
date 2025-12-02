@@ -8,15 +8,15 @@ function Library() {
 
     useEffect(() => {
         fetch("/sample_data.json").then(r=> r.json()).then(r => {
-            setWorks(r.works);
-            setAuthors(r.authors);
+            setWorks(r.docs.filter(w => w.type==="work"));
+            setAuthors(r.docs.filter(a => a.type==="author"));
         })
     }, []);
 
     return (
         <main className="container">
             {works && works.map((x, i) =>
-                <WorkHeadline work={x} author={authors.find(a => x.author_id === a.author_id)} key={i} />
+                <WorkHeadline work={x} author={authors.find(a => x.author_id === +a._id)} key={i} />
             )}
             {!works && <h2>No works found</h2>}
         </main>

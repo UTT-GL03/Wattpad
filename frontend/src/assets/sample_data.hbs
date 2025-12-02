@@ -1,40 +1,40 @@
 {
-    "authors": [
+    "docs": [
     {{#repeat 100}}
         {
-        "author_name":"{{firstName}} {{lastName}}",
-        "author_id": {{@index}}
+        "_id": "{{@index}}",
+        "type":"author",
+        "author_name":"{{firstName}} {{lastName}}"
+        }
+    {{/repeat}},
+    {{#repeat min=100 max=200}}
+        {
+        "_id":"100{{@index}}",
+        "type":"work",
+        "tags": "{{random 'OS' 'AU' 'HS' 'H/C' 'H-C'}}",
+        "published": "{{date '2025-09-01' '2025-12-20' 'unix'}}",
+        "author_id": {{int 0 99}},
+        "work_title": "{{lorem min=3 max=20}}",
+        "summary": "{{lorem min=10 max=100}}",
+        "chapters": [
+            {{#repeat min=5 max=30}}
+                {
+                    "chapter_title" : "{{lorem min=1 max=5}}",
+                    "chapter_id" : {{@index}},
+                    "content" : "{{#repeat min=1 max=15 comma=false}}{{lorem min=5 max=120}}\n\n{{/repeat}}",
+                    "comments" : [
+                    {{#repeat min=0 max=5}}
+                        {
+                        "comment_writer" : "{{firstName}} {{lastName}}",
+                        "comment_content" : "{{lorem min=1 max=20}}"
+                        }
+                    {{/repeat}}
+                    ]
+                }
+            {{/repeat}}
+        ]
         }
     {{/repeat}}
-    ],
-    "works": [
-        {{#repeat min=100 max=200}}
-            {
-            "tags": "{{random 'OS' 'AU' 'HS' 'H/C' 'H-C'}}",
-            "published": "{{date '2025-09-01' '2025-12-20' 'unix'}}",
-            "author_id": {{int 0 19}},
-            "work_title": "{{lorem min=3 max=20}}",
-            "work_id": {{@index}},
-            "summary": "{{lorem min=10 max=100}}",
-            "chapters": [
-                {{#repeat min=5 max=30}}
-                    {
-                        "chapter_title" : "{{lorem min=1 max=5}}",
-                        "chapter_id" : {{@index}},
-                        "content" : "{{#repeat min=1 max=15 comma=false}}{{lorem min=5 max=120}}\n\n{{/repeat}}",
-                        "comments" : [
-                        {{#repeat min=0 max=5}}
-                            {
-                            "comment_writer" : "{{firstName}} {{lastName}}",
-                            "comment_content" : "{{lorem min=1 max=20}}"
-                            }
-                        {{/repeat}}
-                        ]
-                    }
-                {{/repeat}}
-            ]
-            }
-        {{/repeat}}
     ]
 }
 

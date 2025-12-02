@@ -10,9 +10,10 @@ function Chapter() {
     let [work, setWork] = useState();
     useEffect(() => {
         fetch("/sample_data.json").then(r=> r.json()).then(r => {
-            const work = r.works.find(w => w.work_id === +work_id)
+            const work = r.docs.find(w => (w.type === "work" && w._id === work_id))
             setWork(work);
-            setAuthor(r.authors.find(a => a.author_id === +work.author_id));
+            setAuthor(r.docs.find(a => (a.type === "author" && a._id === work.author_id)));
+            console.log(work)
             setChapter(work.chapters.find(c => c.chapter_id === +chapter_id));
         })
     }, [work_id, chapter_id]);

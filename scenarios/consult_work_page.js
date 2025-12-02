@@ -1,5 +1,5 @@
 const visit = async (page) => {
-  await page.goto('work/0', {
+  await page.goto('work/1000', {
       waitUntil: 'networkidle',
   });
   await page.waitForTimeout(10000);
