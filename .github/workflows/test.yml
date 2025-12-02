@@ -29,8 +29,24 @@ jobs:
           name: frontend-build
           path: frontend/dist
 
+  build_samples:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download sources
+        uses: actions/checkout@v5
+      - name: Generate sample
+        run: |
+          npx --yes dummy-json sample_data.hbs > sample_data.json
+      - name: Save samples for later
+        uses: actions/upload-artifact@v4
+        with:
+          name: samples
+          path: sample_data.json
+
   measure_ecoindex:
-    needs: build
+    needs:
+      - build
+      - build_samples
     runs-on: ubuntu-latest
     steps:
       - name: Download sources
@@ -45,14 +61,18 @@ jobs:
           npm install
           npm link
       - name: Run GreenIT Analysis CLI
-        run: greenit analyse --format html --ci scenarios/read_a_story.yml
+        run: |
+          greenit analyse --format html --ci scenarios/read_a_story.yml
       - name: Save results
         uses: actions/upload-artifact@v4
         with:
           name: EcoIndex
           path: scenarios/Read_A_Story.html
+
   measure_energy_consumption:
-      needs: build
+      needs:
+      - build
+      - build_samples
       runs-on: ubuntu-latest
       steps:
         - name: Download sources
