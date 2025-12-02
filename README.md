@@ -215,6 +215,37 @@ Le logiciel GreenFrame est capable d'estimer, pour les différents composants de
 - pour le navigateur uniquement, de l'écran (à partir du temps d'exécution du scénario).
 
 
+│ (Consulter les titres d'oeuvres)                  │ cpu (Wh)   │ mem (Wh)    │ disk (Wh) │ network (Wh) │ screen (Wh) │ total (Wh) │
+| ------------------ | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur         | '0.022'    │ '0.00011'   │ '0.0'     │ <mark>'0.057'</mark>      │ '0.11'      │ '0.19'     │
+| Serveur Web        | '0.000015' │ '0.0000046' │ '0.0'     │ <mark>'0.057'</mark>      │ '0.0'       │ '0.057'    │
+
+│ (Consulter une oeuvre)                  │ cpu (Wh)   │ mem (Wh)    │ disk (Wh) │ network (Wh) │ screen (Wh) │ total (Wh) │
+| ------------------ | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur         | '0.0014'   │ '0.000062'  │ '0.0'     │ <mark>'0.057'</mark>      │ '0.068'     │ '0.13'     │
+| Serveur Web        | '0.000015' │ '0.0000029' │ '0.0'     │ <mark>'0.057'</mark>      │ '0.0'       │ '0.057'    │
+
+│ (Consulter un chapitre)                  │ cpu (Wh)   │ mem (Wh)    │ disk (Wh) │ network (Wh) │ screen (Wh) │ total (Wh) │
+| ------------------ | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur         | '0.0016'   │ '0.000062'  │ '0.0'     │ <mark>'0.057'</mark>      │ '0.069'     │ '0.13'     │
+| Serveur Web        | '0.000014' │ '0.0000029' │ '0.0'     │ <mark>'0.057'</mark>      │ '0.0'       │ '0.057'    │
+
+__Tab.5__: Estimation de la consommation énergétique de la consultation de chaque type de page.
+
+Par rapport à ce que pouvait laisser penser l'EcoIndex, les résultats (cf. Tab.5) indiquent que la consommation due à la consultation de l'index (avec ses 200 titres) est équivalente à celle d'un chapitre. Autrement dit, l'affichage en lui même de ces données en grand nombre est négligeable par rapport à la transmission de ces données sur le réseau.
+
+Par contre, l'affichage de ces données a bien un impact indirect : en augmentant le temps de lecture, il a un effet déterminant sur le temps d'éclairage de l'écran. 
+De fait, les trois éléments ayant le plus d'impact (à peu près à égalité, le reste étant négligeable), sont ici : 
+
+- l'écran du client,
+- le réseau du client,
+- le réseau du serveur.
+
+### Effet de l'introduction d'une base de données
+
+Afin de réduire l'impact énérgétique du réseau, nous stockons désormais les données de l'application (`v2.0.0`) dans une base de données (*CouchDB*).
+Cette évolution nous permet, lors de l'affichage d'une oeuvre, de charger une seule oeuvre plutôt que 200.
+
 
 ## Sources statistiques
 - https://expandedramblings.com/index.php/wattpad-statistics-facts/
