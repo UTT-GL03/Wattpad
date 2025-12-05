@@ -214,8 +214,6 @@ Le logiciel GreenFrame est capable d'estimer, pour les différents composants de
 - du réseau (à partir de la taille des données reçues et envoyées),
 - pour le navigateur uniquement, de l'écran (à partir du temps d'exécution du scénario).
 
-
-
  (Consulter les titres d'oeuvres)                 | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
 | ------------------ | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
 | Navigateur         | 0.022     | 0.00011   | 0.0       | <mark>0.057</mark> | <mark>0.11</mark> | 0.19  |
@@ -257,7 +255,6 @@ __Tab.6__: Effet sur l'utilisation des ressources de l'introduction d'une base d
 
 Cette amélioration (cf. Tab.6) est ne semble pas causer de changement significatifs. On peut cependant noter une utilisation des ressources par la base de données négligeable excepté une consommation très importante de mémoire vive (30 fois la quantité nécessaire pour le serveur Web).
 
-
  (Consulter les titres d'oeuvres)              | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
 | --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
 | Navigateur      | <del>0,022</del><br/>0,031     | <del>0,00011</del><br/>0,00014   | 0,0       | <del>0,057</del><br/>0,078 | <del>0,11</del><br/>0,13 | <del>0,19</del><br/>0,24  |
@@ -275,8 +272,6 @@ __Tab.7__: Effet sur la consommation énergétique de l'introduction d'une base 
 On peut remarquer que l'ajout de la base de données est relativement négligeable puisqu'elle consomme peut et de semble pas causer de changements significatifs.
 
 Il est possible que nos données soient en trop petit nombre pour voir un changement significatif prendre place.
-
-
 
 ### Stratégie de limitation du nombre d'éléments affichés
 
