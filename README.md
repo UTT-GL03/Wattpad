@@ -278,10 +278,3 @@ Il est possible que nos données soient en trop petit nombre pour voir un change
 
 
 
-
-
-## Sources statistiques
-- https://expandedramblings.com/index.php/wattpad-statistics-facts/
-- https://ao3demographicssurvey2024.tumblr.com/post/768677035317018624/the-ao3-demographics-survey-2024-was-an-unofficial
-- https://www.researchgate.net/figure/equipements-utilises-par-les-lecteurs-pour-la-lecture-numerique-selon-lappartenance_fig3_364294529
-- https://www.journaldunet.com/publishers/1187389-marche-lecture-numerique-statista/
