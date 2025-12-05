@@ -278,3 +278,8 @@ Il est possible que nos données soient en trop petit nombre pour voir un change
 
 
 
+### Stratégie de limitation du nombre d'éléments affichés
+
+Pour donner accès sur à un nombre limité d'oeuvres sur la page d'accueil, nous décidons de ne faire apparaitre que les 10 oeuvres les plus récentes. Pour cela, il faut indexer préalablement les oeuvres en fonction de leur date et heure de publication en ligne.
+
+
