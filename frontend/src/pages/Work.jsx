@@ -11,7 +11,8 @@ function Work() {
         fetch("/sample_data.json").then(r=> r.json()).then(r => {
             const work = r.docs.find(w => (w._id === work_id))
             setWork(work);
-            setAuthor(r.docs.find(a => (a.type === "author" && a._id === work.author_id)));
+            console.log(work)
+            setAuthor(r.docs.find(a => (a.type === "author" && +a._id === work.author_id)));
         })
     }, [work_id]);
     /* TODO: plus tard,
