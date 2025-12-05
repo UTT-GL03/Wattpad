@@ -2,8 +2,8 @@
 
 ## Choix du Sujet
 Notre utilisation personnelle de services de lecture et d'écriture en ligne constitue une valeur moyenne horaire de 20h/semaine. Ce qui est une grosse partie de notre consommation en ligne, non pas pour la consommation électrique mais la durée d'utilisation. Nous avons constaté :
-- Une augmentation significative d'utilisation de services de lecture en ligne durant la période COVID de lecteurs(ices) en ligne.
-- 15 millions d'oeuvres écrites sur le site Archive of our Own
+- [Une augmentation significative d'utilisation de services de lecture en ligne durant la période COVID de lecteurs(ices) en ligne.](https://www.sne.fr/numerique-2/barometre-sur-les-usages-du-livre-numerique/)
+- [15 millions d'oeuvres écrites sur le site Archive of our Own](https://ao3demographicssurvey2024.tumblr.com/post/768677035317018624/the-ao3-demographics-survey-2024-was-an-unofficial)
 
 
 ## Utilité Sociale
