@@ -277,5 +277,22 @@ Il est possible que nos données soient en trop petit nombre pour voir un change
 
 Pour donner accès sur à un nombre limité d'oeuvres sur la page d'accueil, nous décidons de ne faire apparaitre que les 5 oeuvres les plus récentes. Le reste sera accessible en cliquant sur un bouton "Suivant". Pour cela, il faut indexer préalablement les oeuvres en fonction de leur date et heure de publication en ligne.
 
+|                 | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
+| --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur      | <del>0,031</del><br/>0,00081 | <del>0,00014</del><br/>0,000044 | 0,0 | <del><mark>0,078</mark></del><br/>0,0028 | <del>0,13</del><br/><mark>0,068</mark> | <del>0,24</del><br/>0,071 |
+| Serveur Web     | <del>0,0000190</del><br/>,0000036 | <del>0,0000053</del><br/>0,0000028 | 0,0 | <mark><del>0,078</del></mark><br/>0,0028 | 0,0 | <del>0,078</del><br/>0,0028 |
+| Base de données | <del>0,0012</del><br/>0,00088 | <del>0,00012</del><br/>0,000064 | 0,0 | <del><mark>0,00000013</mark></del><br/>0,000057 | 0,0 | <del>0,0013</del><br/>0,0010 |
+
+__Tab.10__ : Effet sur la consommation énergétique du chargement progressif (à la demande) lors de la consultation des titres des oeuvres.
+
+L'implémentation de la stratégie en question a l'effet attendu (cf. Tab.10) : la consommation électrique de l'ensemble des composants se retrouve réduite quasiment à celle de l'écran.
+
+On pourrait bien-sûr opposer le fait que, dès lors, si l'on souhaitait afficher l'ensemble des éléments, la consommation serait supérieure à celle qu'elle était avant la mise en place du chargement progressif.
+Cependant, la centaine de clics qui serait nécessaire rend ce scénario d'utilisation peu probable, d'autant plus que les oruvres les plus récents sont affichés en premier.
+
+Pour résumer, le passage à l'échelle avait entraîné une augnmentation de la consommation électrique, mais par des techniques simples de base de données (sélection du document pertinent, projection des attributs nécessaires et pagination des résultats), la consommation électrique est revenue a ses valeurs initiales. En l'état, la consommation électrique est constante par rapport à la volumétrie des articles de oeuvres, et à un niveau si bas que la part due au CPU, à la mémoire et au réseau est négligeable par rapport à celle de l'écran.
+
+L'enjeu dans les améliorations à venir de l'application sera de veiller à conserver cette sobriété.
+
 
 
