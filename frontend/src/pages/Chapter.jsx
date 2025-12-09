@@ -9,13 +9,18 @@ function Chapter() {
     let [author, setAuthor] = useState();
     let [work, setWork] = useState();
     useEffect(() => {
-        fetch("/sample_data.json").then(r=> r.json()).then(r => {
-            const work = r.docs.find(w => (w.type === "work" && w._id === work_id))
-            setWork(work);
-            setAuthor(r.docs.find(a => (a.type === "author" && a._id === work.author_id)));
-            console.log(work)
-            setChapter(work.chapters.find(c => c.chapter_id === +chapter_id));
-        })
+        fetch(`http://localhost:5984/wattpad/${work_id}`)
+            .then(r=> r.json())
+            .then(r => {
+                setWork(r);
+                setChapter(r.chapters.find(c => c.chapter_id === +chapter_id));
+                return fetch(`http://localhost:5984/wattpad/${r.author_id}`)
+            })
+            .then(r=> r.json())
+            .then(r => {
+                setAuthor(r);
+            })
+    
     }, [work_id, chapter_id]);
     return (
         <main className="container">

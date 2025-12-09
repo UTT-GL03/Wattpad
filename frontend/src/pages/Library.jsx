@@ -15,12 +15,13 @@ function Library() {
         body: JSON.stringify({
           selector: { published: { "$gt": null } },
           sort: [{ published: "desc" }],
-          fields: ["_id", "type", "tags", "published", "author_id", "work_title", "summary", "chapters"],
+          fields: ["_id", "type", "tags", "published", "author_id", "work_title", "summary"],
           bookmark: requestedBookmark,
           limit: 5
         })
         }).then(r=> r.json()).then(r => {
-            setWorks(r.docs);
+            console.log("ksjd <3 ",r);
+            setWorks([...works, ...r.docs]);
             setNextBookmark(r.bookmark)
         })
         fetch('http://localhost:5984/wattpad/_find', {
@@ -32,7 +33,6 @@ function Library() {
           limit:500
         })
         }).then(r=> r.json()).then(r => {
-            console.log(r)
             setAuthors(r.docs);
         })
     }, [requestedBookmark]);

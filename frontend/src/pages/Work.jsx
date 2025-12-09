@@ -7,14 +7,22 @@ function Work() {
     const {work_id} = useParams();
     let [work, setWork] = useState();
     let [author, setAuthor] = useState();
+
     useEffect(() => {
-        fetch("/sample_data.json").then(r=> r.json()).then(r => {
-            const work = r.docs.find(w => (w._id === work_id))
-            setWork(work);
-            console.log(work)
-            setAuthor(r.docs.find(a => (a.type === "author" && +a._id === work.author_id)));
-        })
-    }, [work_id]);
+        fetch(`http://localhost:5984/wattpad/${work_id}`)
+            .then(r=> r.json())
+            .then(r => {
+                setWork(r);
+                return fetch(`http://localhost:5984/wattpad/${r.author_id}`)
+            })
+            .then(r=> r.json())
+            .then(r => {
+                setAuthor(r);
+            })
+    
+    }, []);
+
+
     /* TODO: plus tard,
      ** - ajouter le composant headline chapter (ajout plus facilement publier ou non et séparer la logique des composant pour l'appel work)
      ** - séparer dans les ressources les chapitres des ouvrages

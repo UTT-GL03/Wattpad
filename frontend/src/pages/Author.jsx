@@ -10,11 +10,22 @@ function Author() {
     let [author, setAuthor] = useState();
     let [works, setWorks] = useState();
     useEffect(() => {
-        fetch("/sample_data.json").then(r=> r.json()).then(r => {
-            const work = r.docs.filter(w => (w.type === "work" && w.author_id === +author_id))
-            setWorks(work);
-            setAuthor(r.docs.find(a => (a._id === author_id)));
+        fetch('http://localhost:5984/wattpad/_find', {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          selector: { type: "work", author_id: parseInt(author_id) },
+          fields: ["_id","type","author_name","tags","published","author_id","work_title","summary"],
+          limit:500
         })
+        }).then(r=> r.json()).then(r => {
+            setWorks(r.docs);
+        })
+        fetch(`http://localhost:5984/wattpad/${author_id}`)
+            .then(r=> r.json())
+            .then(r => {
+                setAuthor(r);
+            })
     }, []);
 
 
