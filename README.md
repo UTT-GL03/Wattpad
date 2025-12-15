@@ -218,18 +218,18 @@ Le logiciel GreenFrame est capable d'estimer, pour les différents composants de
 
  (Consulter les titres d'oeuvres)                 | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
 | ------------------ | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
-| Navigateur         | 0.022     | 0.00011   | 0.0       | <mark>0.057</mark> | <mark>0.11</mark> | 0.19  |
-| Serveur Web        | 0.000015   | 0.0000046   | 0.0       | <mark>0.057</mark> | 0.0                | 0.057 |
+| Navigateur         | 0.022     | 0.00011   | 0.0       | 0.057 | 0.11 | 0.19  |
+| Serveur Web        | 0.000015   | 0.0000046   | 0.0       | 0.057 | 0.0                | 0.057 |
 
  (Consulter une oeuvre)                 | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
 | ------------------ | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
-| Navigateur         | 0.0014     | 0.000062   | 0.0       | <mark>0.057</mark> | <mark>0.68</mark> | 0.13  |
-| Serveur Web        | 0.000015   | 0.0000029   | 0.0       | <mark>0.057</mark> | 0.0                | 0.057 |
+| Navigateur         | 0.0014     | 0.000062   | 0.0       | 0.057 | 0.68 | 0.13  |
+| Serveur Web        | 0.000015   | 0.0000029   | 0.0       | 0.057 | 0.0                | 0.057 |
 
  (Consulter un chapitre)                 | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
 | ------------------ | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
-| Navigateur         | 0.0016     | 0.000062   | 0.0       | <mark>0.057</mark> | <mark>0.69</mark> | 0.13  |
-| Serveur Web        | 0.000014   | 0.0000029   | 0.0       | <mark>0.057</mark> | 0.0                | 0.057 |
+| Navigateur         | 0.0016     | 0.000062   | 0.0       | 0.057 | 0.69 | 0.13  |
+| Serveur Web        | 0.000014   | 0.0000029   | 0.0       | 0.057 | 0.0                | 0.057 |
 
 __Tab.5__: Estimation de la consommation énergétique de la consultation de chaque type de page.
 
@@ -260,13 +260,13 @@ Cette amélioration (cf. Tab.6) est ne semble pas causer de changement significa
  (Consulter les titres d'oeuvres)              | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
 | --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
 | Navigateur      | <del>0,022</del><br/>0,031     | <del>0,00011</del><br/>0,00014   | 0,0       | <del>0,057</del><br/>0,078 | <del>0,11</del><br/>0,13 | <del>0,19</del><br/>0,24  |
-| Serveur Web     | <del>0,000015</del><br/>0,000019 | <del>0,0000046</del><br/>0,0000053 | 0,0 | <mark><del>0,057</del></mark><br/>0,078 | 0,0 | <del>0,057</del><br/>0,078 |
-| Base de données | <del>0</del><br/>0,0012 | <del>0</del><br/>0,00012 | 0,0 | <del>0</del><br/><mark>0,00000013</mark> | 0,0 | <del>0</del><br/>0,0013 |
+| Serveur Web     | <del>0,000015</del><br/>0,000019 | <del>0,0000046</del><br/>0,0000053 | 0,0 | <del>0,057</del><br/>0,078 | 0,0 | <del>0,057</del><br/>0,078 |
+| Base de données | <del>0</del><br/>0,0012 | <del>0</del><br/>0,00012 | 0,0 | <del>0</del><br/>0,00000013 | 0,0 | <del>0</del><br/>0,0013 |
 
 | (Consulter un chapitre)             | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh)        | total (Wh) |
 | --------------- | ---------- | ---------- | --------- | ------------------ | ------------------ | ---------- | 
-| Navigateur      | <del>0,0016</del><br/>0,0013 | <del>0,000062</del><br/>0,000058 | 0,0 | <del><mark>0,057</mark></del><br/>0,078 | <mark>0,69</mark> | <del>0,13</del><br/>0,15 |
-| Serveur Web     | <del>0,000014</del><br/>0,000017 | <del>0,0000029</del><br/>0,0000029 | 0,0 | <del><mark>0,057</mark></del><br/>0,080 | 0,0 | <del>0,057</del><br/>0,080 |
+| Navigateur      | <del>0,0016</del><br/>0,0013 | <del>0,000062</del><br/>0,000058 | 0,0 | <del>0,057</del><br/>0,078 | 0,69 | <del>0,13</del><br/>0,15 |
+| Serveur Web     | <del>0,000014</del><br/>0,000017 | <del>0,0000029</del><br/>0,0000029 | 0,0 | <del>0,057</del><br/>0,080 | 0,0 | <del>0,057</del><br/>0,080 |
 | Base de données | <del>0</del><br/>0,00059 | <del>0</del><br/>0,000067 | 0,0 | 0,0 | 0,0 | <del>0</del><br/>0,00065 |
 
 __Tab.7__: Effet sur la consommation énergétique de l'introduction d'une base de données dans l'application, lors de la consultation des titres d'oeuvres (premier tableau) et d'un chapitre (second tableau).
@@ -281,9 +281,9 @@ Pour donner accès sur à un nombre limité d'oeuvres sur la page d'accueil, nou
 
 | (Consulter les titres d'oeuvres)                | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
 | --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
-| Navigateur      | <del>0,031</del><br/>0,00081 | <del>0,00014</del><br/>0,000044 | 0,0 | <del><mark>0,078</mark></del><br/>0,0028 | <del>0,13</del><br/><mark>0,068</mark> | <del>0,24</del><br/>0,071 |
-| Serveur Web     | <del>0,0000190</del><br/>,0000036 | <del>0,0000053</del><br/>0,0000028 | 0,0 | <mark><del>0,078</del></mark><br/>0,0028 | 0,0 | <del>0,078</del><br/>0,0028 |
-| Base de données | <del>0,0012</del><br/>0,00088 | <del>0,00012</del><br/>0,000064 | 0,0 | <del><mark>0,00000013</mark></del><br/>0,000057 | 0,0 | <del>0,0013</del><br/>0,0010 |
+| Navigateur      | <del>0,031</del><br/>0,00081 | <del>0,00014</del><br/>0,000044 | 0,0 | <del>0,078</del><br/>0,0028 | <del>0,13</del><br/>0,068 | <del>0,24</del><br/>0,071 |
+| Serveur Web     | <del>0,0000190</del><br/>,0000036 | <del>0,0000053</del><br/>0,0000028 | 0,0 | <del>0,078</del><br/>0,0028 | 0,0 | <del>0,078</del><br/>0,0028 |
+| Base de données | <del>0,0012</del><br/>0,00088 | <del>0,00012</del><br/>0,000064 | 0,0 | <del>0,00000013</del><br/>0,000057 | 0,0 | <del>0,0013</del><br/>0,0010 |
 
 __Tab.8__ : Effet sur la consommation énergétique du chargement progressif (à la demande) lors de la consultation des titres des oeuvres.
 
@@ -305,9 +305,9 @@ Pour cela, nous avons créé une seconde branche "tag_browsing" dans laquelle la
 
 | (Consulter les titres d'oeuvres)                | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
 | --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
-| Navigateur      | <del>0,00081</del><br/>0,0019 | <del>0,000044</del><br/>0,000049 | 0,0 | <del><mark>0,0028</mark></del><br/>0,0029 | 0,068| <del>0,071</del><br/>0,073 |
+| Navigateur      | <del>0,00081</del><br/>0,0019 | <del>0,000044</del><br/>0,000049 | 0,0 | <del>0,0028</del><br/>0,0029 | 0,068| <del>0,071</del><br/>0,073 |
 | Serveur Web     | <del>0,0000036</del><br/>,0000034 | <del>0,0000028</del><br/>0,0000029 | 0,0 | 0,0028 | 0,0 | <del>0,0028</del><br/>0,0028 |
-| Base de données | <del>0,00088</del><br/>0,0011 | <del>0,000064</del><br/>0,000067 | 0,0 | <del><mark>0,000057</mark></del><br/>0,00015 | 0,0 | <del>0,0010</del><br/>0,0013 |
+| Base de données | <del>0,00088</del><br/>0,0011 | <del>0,000064</del><br/>0,000067 | 0,0 | <del>0,000057</del><br/>0,00015 | 0,0 | <del>0,0010</del><br/>0,0013 |
 
 __Tab.9__ : Effet sur la consommation énergétique de l'ajout d'un affichage par tag lors de la consultation des titres d'une oeuvre.
 
