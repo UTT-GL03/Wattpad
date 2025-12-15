@@ -204,6 +204,8 @@ On pourrait s'étonner que la baisse de l'EcoIndex soit beaucoup plus forte pour
 Ceci s'explique par le fait que l'EcoIndex vise à évaluer un impact global, incluant une part de la fabrication et de la fin de vie des terminaux, et que cette part augmente avec le nombre d'éléments de la page.
 Pour évaluer plus précisément l'impact de la consultation elle-même nous utiliserons un autre outil de mesure : GreenFrame.
 
+## Mesure de la consommation énergétique par pages et optimisation
+
 ### Mesure de la consommation énergétique liée à la consultation
 
 Le logiciel GreenFrame est capable d'estimer, pour les différents composants de l'architecture, la consommation énergétique :
@@ -277,13 +279,13 @@ Il est possible que nos données soient en trop petit nombre pour voir un change
 
 Pour donner accès sur à un nombre limité d'oeuvres sur la page d'accueil, nous décidons de ne faire apparaitre que les 5 oeuvres les plus récentes. Le reste sera accessible en cliquant sur un bouton "Suivant". Pour cela, il faut indexer préalablement les oeuvres en fonction de leur date et heure de publication en ligne.
 
-|                 | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
+| (Consulter les titres d'oeuvres)                | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
 | --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
 | Navigateur      | <del>0,031</del><br/>0,00081 | <del>0,00014</del><br/>0,000044 | 0,0 | <del><mark>0,078</mark></del><br/>0,0028 | <del>0,13</del><br/><mark>0,068</mark> | <del>0,24</del><br/>0,071 |
 | Serveur Web     | <del>0,0000190</del><br/>,0000036 | <del>0,0000053</del><br/>0,0000028 | 0,0 | <mark><del>0,078</del></mark><br/>0,0028 | 0,0 | <del>0,078</del><br/>0,0028 |
 | Base de données | <del>0,0012</del><br/>0,00088 | <del>0,00012</del><br/>0,000064 | 0,0 | <del><mark>0,00000013</mark></del><br/>0,000057 | 0,0 | <del>0,0013</del><br/>0,0010 |
 
-__Tab.10__ : Effet sur la consommation énergétique du chargement progressif (à la demande) lors de la consultation des titres des oeuvres.
+__Tab.8__ : Effet sur la consommation énergétique du chargement progressif (à la demande) lors de la consultation des titres des oeuvres.
 
 L'implémentation de la stratégie en question a l'effet attendu (cf. Tab.10) : la consommation électrique de l'ensemble des composants se retrouve réduite quasiment à celle de l'écran.
 
@@ -295,4 +297,20 @@ Pour résumer, le passage à l'échelle avait entraîné une augnmentation de la
 L'enjeu dans les améliorations à venir de l'application sera de veiller à conserver cette sobriété.
 
 
+## Amélioration ?
+
+Nous souhaitons maintenant essayer d'ajouter une fonctionnalité recherchée par les utilisateurs, à savoir la possibilité de voir la liste des oeuvres sur un thème précis, et donc la visualisation par tag.
+Pour cela, nous avons créé une seconde branche "tag_browsing" dans laquelle la fonctionnalité a été développée et nous allons maintenant comparer la consommation du site avec cette nouvelle fonctionnalité comparée à celle du site de la branche "main".
+
+
+| (Consulter les titres d'oeuvres)                | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
+| --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
+| Navigateur      | <del>0,00081</del><br/>0,0019 | <del>0,000044</del><br/>0,000049 | 0,0 | <del><mark>0,0028</mark></del><br/>0,0029 | 0,068| <del>0,071</del><br/>0,073 |
+| Serveur Web     | <del>0,0000036</del><br/>,0000034 | <del>0,0000028</del><br/>0,0000029 | 0,0 | 0,0028 | 0,0 | <del>0,0028</del><br/>0,0028 |
+| Base de données | <del>0,00088</del><br/>0,0011 | <del>0,000064</del><br/>0,000067 | 0,0 | <del><mark>0,000057</mark></del><br/>0,00015 | 0,0 | <del>0,0010</del><br/>0,0013 |
+
+__Tab.9__ : Effet sur la consommation énergétique de l'ajout d'un affichage par tag lors de la consultation des titres d'une oeuvre.
+
+
+On peut remarquer une petite augmentation, mais pas aussi grande qu'on aurait pu le penser. Nous pensons qu'il est légitime d'ajouter cette fonctionnalité définitivement au projet au vu de son importance fonctionnelle et de son coût faible.
 
