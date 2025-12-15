@@ -1,0 +1,10 @@
+{
+  "index": {
+    "fields": [
+      {"tags": "desc"},
+      {"published": "desc"}
+    ]
+  },
+  "name": "by_section_and_date",
+  "type": "json"
+}

@@ -21,6 +21,7 @@ function App() {
                     <Route path="work/:work_id" element={<Work/>}/>
                     <Route path="work/:work_id/chapter/:chapter_id" element={<Chapter/>}/>
                     <Route path="author/:author_id" element={<Author/>}/>
+                    <Route path="/:tags" element={<Library/>} />
                 </Routes>
             </AuthContext>
         </BrowserRouter>

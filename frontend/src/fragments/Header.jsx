@@ -3,6 +3,10 @@ import useAuth from "../useAuth"
 import {useContext} from "react";
 import {AuthContext} from "../contexts.jsx";
 
+const TAGS = [
+    'OS', 'AU', 'HS', 'H-C', 'ABO', 'AN', 'NCC'
+]
+
 function Header({setAuth}) {
 
     const handleLogin = () => {
@@ -18,13 +22,23 @@ function Header({setAuth}) {
     const {author_id, logged} = useContext(AuthContext)
 
     return (
-        <header className="grid">
-            <Link to="/"><h1>Wattpad</h1></Link>
-            <Link type="button" to={"/author/"+author_id}>Profil</Link>
-            {!logged && <button type="button" onClick={handleLogin}>Log in</button>}
-            {logged && <button type="button" onClick={handleLogout}>Logout</button>}
-        </header>
-
+        <nav>
+            <ul>
+                <Link to="/"><h1>Wattpad</h1></Link>
+                {TAGS.map((x, i) =>
+                    <li key={i}>
+                        <Link to={`/${x}`}>
+                        {x}
+                        </Link>
+                    </li>
+                )}
+            </ul>
+            <ul>
+                <Link type="button"  className="navBarButton" to={"/author/"+author_id}>Profil</Link>
+                {!logged && <button type="button" className="navBarButton" onClick={handleLogin}>Log in</button>}
+                {logged && <button type="button" className="navBarButton" onClick={handleLogout}>Logout</button>}
+            </ul>
+        </nav>
     )
 }
 

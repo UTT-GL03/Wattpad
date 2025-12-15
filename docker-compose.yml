@@ -33,6 +33,20 @@ services:
     depends_on:
       backend:
         condition: service_healthy
+
+  index:
+    image: curlimages/curl
+    entrypoint: ["/bin/sh","-c"]
+    volumes:
+      - ./backend/by_date.json:/by_date.json
+      - ./backend/by_section_and_date.json:/by_section_and_date.json
+    command:
+      - |
+        curl -X POST http://backend:5984/wattpad/_index -H "Content-Type: application/json" -d @/by_date.json -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}'
+        curl -X POST http://backend:5984/wattpad/_index -H "Content-Type: application/json" -d @/by_section_and_date.json -u '${COUCHDB_USER}:${COUCHDB_PASSWORD}'
+    depends_on:
+      accessible_backend:
+        condition: service_completed_successfully
       
   updated_samples:
     image: curlimages/curl
@@ -41,7 +55,7 @@ services:
       - ./frontend/public/sample_data.json:/sample_data.json
     command:
       - |
-        curl -X POST http://backend:5984/qvotidie/_bulk_docs -H "Content-Type: application/json" -d @/sample_data.json
+        curl -X POST http://backend:5984/wattpad/_bulk_docs -H "Content-Type: application/json" -d @/sample_data.json
     depends_on:
       accessible_backend:
         condition: service_completed_successfully

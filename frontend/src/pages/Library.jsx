@@ -2,26 +2,31 @@ import WorkHeadline from "../fragments/WorkHeadline.jsx";
 import sendRequest from "../MockApiServer.js";
 import {useContext, useEffect, useState} from "react";
 import {AuthContext} from "../contexts.jsx";
+import { Link, useParams } from 'react-router'
 function Library() {
     let [works, setWorks] = useState([]);
     let [authors, setAuthors] = useState([]);
     const [nextBookmark, setNextBookmark] = useState();
     const [requestedBookmark, setRequestedBookmark] = useState();
+    const { tags } = useParams()
 
-    useEffect(() => {
+    const fetchArticles = (previousArticles) => {
+    const resetBookmark = previousArticles.length === 0
         fetch('http://localhost:5984/wattpad/_find', {
         method: 'POST',
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          selector: { published: { "$gt": null } },
+          selector: {
+            ...(tags && {tags}),
+            published: { "$gt": null }
+          },
           sort: [{ published: "desc" }],
           fields: ["_id", "type", "tags", "published", "author_id", "work_title", "summary"],
-          bookmark: requestedBookmark,
+          bookmark: resetBookmark ? null : requestedBookmark,
           limit: 5
         })
         }).then(r=> r.json()).then(r => {
-            console.log("ksjd <3 ",r);
-            setWorks([...works, ...r.docs]);
+            setWorks([...previousArticles, ...r.docs]);
             setNextBookmark(r.bookmark)
         })
         fetch('http://localhost:5984/wattpad/_find', {
@@ -35,7 +40,15 @@ function Library() {
         }).then(r=> r.json()).then(r => {
             setAuthors(r.docs);
         })
+    }
+
+    useEffect(() => {
+        fetchArticles(works)
     }, [requestedBookmark]);
+
+    useEffect(() => {
+        fetchArticles([])
+    }, [tags])
 
     return (
         <main className="container">

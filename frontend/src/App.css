@@ -28,3 +28,8 @@ a {
   gap: 20px;
   align-items: baseline;
 }
+
+.navBarButton {
+  width: 300px;
+  margin: 5px;
+}
