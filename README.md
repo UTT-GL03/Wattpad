@@ -305,6 +305,7 @@ Pour cela, nous avons créé une seconde branche "tag_browsing" dans laquelle la
 Voici a quoi cela ressemble sur le site une fois implémenté : 
 
 ![Fonctionnalité de choix de tag](./benchmark/Amelioration.png)
+
 __Fig.5__: Fonctionnalité de choix de tag
 
 
