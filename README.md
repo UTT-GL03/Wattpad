@@ -325,4 +325,12 @@ Cependant, on peut se demander si cette fonctionnalité ne causerait pas une aug
 
 ## Bilan et perspectives
 
+Nous retenons plusieurs choses de ce projet.
+
+Premièrement, nous avons été étonnées de la consommation des applications web. Nous savions que les sites consommaient des ressources lors de leur visite et pour leur maintien, mais nous ne pensions pas que la visite consommait autant.
+
+De plus, le fait d'avoir fait une application web et non native lui permet d'être plus accessible car permet à des ordinateurs anciens d'y accéder à condition d'avoir un navigateur mis à jour il y a moins de deux ans.
+
+Pour garantir le modèle économique, nous avions pensé à ajouter des publicités ciblées en fonctions des tags lus par la personne, mais au vu des ressources que cela demanderait, nous avons préféré nous appuyer sur les donnations plutôt. Nous savons que c'est possible et faisable grâce à l'exemple d'AO3, et cela permet de ne pas perdre en optimisation pour ajouter des publicités, à condition de mettre en place une campagne de don annuelle.
+
 
