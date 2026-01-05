@@ -302,6 +302,11 @@ L'enjeu dans les améliorations à venir de l'application sera de veiller à con
 Nous souhaitons maintenant essayer d'ajouter une fonctionnalité recherchée par les utilisateurs, à savoir la possibilité de voir la liste des oeuvres sur un thème précis, et donc la visualisation par tag.
 Pour cela, nous avons créé une seconde branche "tag_browsing" dans laquelle la fonctionnalité a été développée et nous allons maintenant comparer la consommation du site avec cette nouvelle fonctionnalité comparée à celle du site de la branche "main".
 
+Voici a quoi cela ressemble sur le site une fois implémenté : 
+
+![Fonctionnalité de choix de tag](./benchmark/Amelioration.png)
+__Fig.5__: Fonctionnalité de choix de tag
+
 
 | (Consulter les titres d'oeuvres)                | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
 | --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
@@ -313,4 +318,8 @@ __Tab.9__ : Effet sur la consommation énergétique de l'ajout d'un affichage pa
 
 
 On peut remarquer une petite augmentation, mais pas aussi grande qu'on aurait pu le penser. Nous pensons qu'il est légitime d'ajouter cette fonctionnalité définitivement au projet au vu de son importance fonctionnelle et de son coût faible.
+
+
+## Bilan et perspectives
+
 
