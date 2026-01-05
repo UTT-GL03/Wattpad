@@ -312,13 +312,15 @@ __Fig.5__: Fonctionnalité de choix de tag
 | (Consulter les titres d'oeuvres)                | cpu (Wh)   | mem (Wh)   | disk (Wh) | network (Wh)       | screen (Wh) | total (Wh)   |
 | --------------- | ---------- | ---------- | --------- | ------------------ | ----------- | ------------ | 
 | Navigateur      | <del>0,00081</del><br/>0,0019 | <del>0,000044</del><br/>0,000049 | 0,0 | <del>0,0028</del><br/>0,0029 | 0,068| <del>0,071</del><br/>0,073 |
-| Serveur Web     | <del>0,0000036</del><br/>,0000034 | <del>0,0000028</del><br/>0,0000029 | 0,0 | 0,0028 | 0,0 | <del>0,0028</del><br/>0,0028 |
+| Serveur Web     | <del>0,0000036</del><br/>0,0000034 | <del>0,0000028</del><br/>0,0000029 | 0,0 | 0,0028 | 0,0 | <del>0,0028</del><br/>0,0028 |
 | Base de données | <del>0,00088</del><br/>0,0011 | <del>0,000064</del><br/>0,000067 | 0,0 | <del>0,000057</del><br/>0,00015 | 0,0 | <del>0,0010</del><br/>0,0013 |
 
 __Tab.9__ : Effet sur la consommation énergétique de l'ajout d'un affichage par tag lors de la consultation des titres d'une oeuvre.
 
 
 On peut remarquer une petite augmentation, mais pas aussi grande qu'on aurait pu le penser. Nous pensons qu'il est légitime d'ajouter cette fonctionnalité définitivement au projet au vu de son importance fonctionnelle et de son coût faible.
+
+Cependant, on peut se demander si cette fonctionnalité ne causerait pas une augmentation du temps d'écran puisqu'en trouvant un contenu qui plait on reste plus longtemps, et donc une augmentation des ressources utilisées. Nous pensons que c'est un risque probable, mais compensé par la diminution du temps d'écran nécessaire pour trouver le contenu qui nous plairait si cette fonctionnalité n'existait pas. 
 
 
 ## Bilan et perspectives
