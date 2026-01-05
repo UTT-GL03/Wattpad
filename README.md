@@ -247,7 +247,7 @@ De fait, les trois éléments ayant le plus d'impact (à peu près à égalité,
 Afin de réduire l'impact énérgétique du réseau, nous stockons désormais les données de l'application (`v2.0.0`) dans une base de données (*CouchDB*).
 Cette évolution nous permet, lors de l'affichage d'une oeuvre, de charger une seule oeuvre plutôt que 200.
 
-|                    | cpu (s)    | mem (B) | disk (B) | screen (s) | network (B) | total (Wh)   |
+(Consulter une oeuvre)                   | cpu (Wh)    | mem (Wh) | disk (Wh) | screen (Wh) | network (Wh) | total (Wh)   |
 | ------------------ | ---------- | ---------- | --------| -------- | ----------- | ------------ |
 | Navigateur | <del>0,0014</del><br/><add>0,0013</add>|  <del>0,000062</del><br/><add>0,000058</add> | 0,0 | <del>0,057</del><br/><add>0,078</add> | <del>0,68</del><br/><add>0,067</add> | <del>0,13</del><br/><add>0,15</add>  |
 | Serveur Web | <del>0,000015</del><br/><add>0,000019</add> |  <del>0,0000029</del><br/><add>0,0000029</add> | 0,0  | <del>0,057</del><br/><add>0,078</add> | 0,0 | <del>0,057</del><br/><add>0,078</add> |
